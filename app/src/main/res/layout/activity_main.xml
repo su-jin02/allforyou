@@ -39,6 +39,7 @@
         android:background="#FFFFFF"
         android:elevation="5dp"
         android:hint="닉네임을 입력하세요"
+        android:textSize="15sp"
         android:padding="10dp" />
 
     <TextView
@@ -59,6 +60,7 @@
         android:padding="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
+        android:textSize="15sp"
         android:layout_gravity="center"
         />
 
@@ -80,6 +82,7 @@
         android:padding="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
+        android:textSize="15sp"
         android:layout_gravity="center"
         />
 
@@ -102,6 +105,7 @@
         android:padding="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
+        android:textSize="15sp"
         android:layout_gravity="center"
         />
 
@@ -128,6 +132,7 @@
             android:id="@+id/radio_button_man"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:text="남자"
             />
         <RadioButton
@@ -135,6 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
+            android:textSize="12sp"
             android:text="여자"
             />
         <RadioButton
@@ -143,7 +149,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:text="기타"
-            android:layout_marginRight="7dp"
+            android:textSize="12sp"
+            android:layout_marginRight="19dp"
             />
     </RadioGroup>
 
@@ -165,6 +172,7 @@
         android:padding="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
+        android:textSize="15sp"
         android:layout_gravity="center"
         />
 
