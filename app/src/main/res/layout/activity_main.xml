@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="Xdp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -14,8 +15,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="28dp"
         android:text="회원가입"
         android:textSize="20sp"/>
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="닉네임*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
     <EditText
@@ -33,9 +35,11 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         android:hint="닉네임을 입력하세요"
-        android:padding="10dp"/>
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/emailT"
@@ -43,15 +47,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="이메일 주소*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:hint="ID@example.com"
         android:padding="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         android:layout_gravity="center"
         />
 
@@ -61,15 +68,18 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="비밀번호*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
     <EditText
         android:id="@+id/pw1"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:hint="비밀번호"
         android:padding="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         android:layout_gravity="center"
         />
 
@@ -79,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="비밀번호 확인*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
 
@@ -86,9 +97,11 @@
         android:id="@+id/pw2"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:hint="비밀번호 확인"
         android:padding="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         android:layout_gravity="center"
         />
 
@@ -98,6 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="성별*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
     <RadioGroup
@@ -106,6 +120,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         >
         <RadioButton
             android:id="@+id/radio_button_man"
@@ -117,36 +134,43 @@
             android:id="@+id/radio_button_woman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
             android:text="여자"
             />
         <RadioButton
             android:id="@+id/radio_button_else"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
             android:text="기타"
+            android:layout_marginRight="7dp"
             />
     </RadioGroup>
+
     <TextView
         android:id="@+id/birthT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
         android:text="생일*"
+        android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
     <EditText
         android:id="@+id/birth"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:hint="생일입력"
         android:padding="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
         android:layout_gravity="center"
         />
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
