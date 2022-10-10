@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_fragment1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_10k_24"
+        android:title="아이템1" />
+
+    <item
+        android:id="@+id/item_fragment2"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_15mp_24"
+        android:title="아이템2" />
+
+    <item
+        android:id="@+id/item_fragment3"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_18_up_rating_24"
+        android:title="아이템3" />
+
+    <item
+        android:id="@+id/item_fragment4"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_24mp_24"
+        android:title="아이템4" />
+
+    <item
+        android:id="@+id/item_fragment5"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_crop_din_24"
+        android:title="아이템5" />
+</menu>
