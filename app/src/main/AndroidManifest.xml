@@ -18,11 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LuckActivity"/>
-        <activity android:name=".Test1Activity"/>
-        <activity android:name=".DiaryActivity"/>
-        <activity android:name=".SoraActivity"/>
-        <activity android:name=".MypageActivity"/>
+
     </application>
 
 </manifest>
