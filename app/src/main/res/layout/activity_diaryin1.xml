@@ -47,6 +47,7 @@
         android:src="@drawable/img1_resize" />
 
     <EditText
+        android:id="@+id/edittext"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/img1"
@@ -54,10 +55,9 @@
         android:layout_marginStart="42dp"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="94dp"
-        android:gravity="center"
-        android:id="@+id/edittext"
-        android:hint="-오늘의 일기 작성-"
         android:background="@null"
+        android:gravity="center"
+        android:hint="-오늘의 일기 작성-"
         android:textSize="15dp" />
 
 </RelativeLayout>
