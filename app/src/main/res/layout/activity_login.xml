@@ -48,19 +48,20 @@
         android:id="@+id/text1"
         android:text="간편 로그인 "
         android:layout_marginStart="52dp"/>
+
     <Button
+        android:id="@+id/btn2"
         android:layout_width="318dp"
         android:layout_height="55dp"
-        android:text="카카오톡으로 시작하기"
+        android:layout_marginStart="47dp"
         android:layout_marginTop="420dp"
-        android:id="@+id/btn2"
+        android:backgroundTint="#FEE600"
+        android:drawableLeft="@drawable/img_3"
+        android:elevation="20dp"
         android:paddingLeft="55dp"
         android:paddingRight="55dp"
-        android:layout_marginStart="47dp"
-        android:backgroundTint="#FEE600"
-        android:textColor="#000000"
-        android:drawableLeft="@drawable/img_3"
-        android:elevation="20dp"/>
+        android:text="카카오톡으로 시작하기"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/btn3"
