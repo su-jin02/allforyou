@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:andorid="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
@@ -27,7 +28,7 @@
         android:id="@+id/btn_left"
         android:layout_width="30dp"
         android:layout_height="35dp"
-
+        andorid:background="@android:color/transparent"
         android:src="@drawable/ic_baseline_arrow_left_24" />
 
     <TextView
@@ -44,7 +45,7 @@
         android:id="@+id/btn_right"
         android:layout_width="30dp"
         android:layout_height="35dp"
-
+        andorid:background="@android:color/transparent"
         android:src="@drawable/ic_baseline_arrow_right_24" />
         </LinearLayout>
 
