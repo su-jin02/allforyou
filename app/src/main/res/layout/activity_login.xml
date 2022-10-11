@@ -40,14 +40,14 @@
         android:backgroundTint="#DDD3F8"/>
 
     <TextView
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="390dp"
         android:drawableLeft="@drawable/img"
         android:drawableRight="@drawable/img"
-        android:id="@+id/text1"
-        android:text="간편 로그인 "
-        android:layout_marginStart="52dp"/>
+        android:text="      간편 로그인 " />
 
     <Button
         android:id="@+id/btn2"

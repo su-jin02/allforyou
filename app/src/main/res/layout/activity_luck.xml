@@ -27,7 +27,7 @@
         android:id="@+id/btn_left"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:background="#transparent"
+
         android:src="@drawable/ic_baseline_arrow_left_24" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:id="@+id/btn_right"
         android:layout_width="30dp"
         android:layout_height="35dp"
-        android:background="#transparent"
+
         android:src="@drawable/ic_baseline_arrow_right_24" />
         </LinearLayout>
 
