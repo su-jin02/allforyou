@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:andorid="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="심리 테스트"
+        android:textSize = "25sp"
+        android:paddingTop="50dp"
+        android:layout_gravity = "center"
+        />
+
+    <Button
+        android:id="@+id/btn1"
+        andorid:weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/testimage"
+        android:text="테스트하러 가기"
+        android:backgroundTint="#DDD3F8"
+        android:textSize = "20sp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        andorid:weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/testimage"
+        android:backgroundTint="#DDD3F8"
+        android:text="테스트하러 가기"
+        android:textSize = "20sp"/>
+
+
+
+
+</LinearLayout>
