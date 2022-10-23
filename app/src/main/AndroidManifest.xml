@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgramming_3">
         <activity
+            android:name=".MypageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MypageActivity1"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -17,10 +23,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name="SignupActivity"/>
-        <activity android:name="MainActivity"/>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

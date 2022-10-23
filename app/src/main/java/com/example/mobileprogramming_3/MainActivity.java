@@ -2,8 +2,11 @@ package com.example.mobileprogramming_3;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -47,14 +50,32 @@ public class MainActivity extends AppCompatActivity {
                                 R.id.main_frame, new SoraActivity()).commit();
                         break;
                     case R.id.item_fragment5:
-                        getSupportFragmentManager().beginTransaction().replace(
-                                R.id.main_frame, new MypageActivity()).commit();
                         break;
                 }
                 return true;
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.top_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        switch (item.getItemId()){
+            case R.id.mypage_menu:
+                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                startActivity(intent);
+                return true;
+        }
+        return false;
     }
 
     public void onFragmentChange(int index){
@@ -96,5 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
         return false;
     }
+
 
 }
