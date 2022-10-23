@@ -14,7 +14,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="28dp"
         android:text="회원가입"
@@ -86,7 +86,6 @@
         android:layout_gravity="center"
         />
 
-
     <TextView
         android:id="@+id/pw2T"
         android:layout_width="wrap_content"
@@ -97,12 +96,19 @@
         android:textSize="15sp" />
 
 
+    <LinearLayout
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="28dp"
+    android:orientation="horizontal">
+
+
     <EditText
         android:id="@+id/pw2"
-        android:layout_width="320dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:hint="비밀번호 확인"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
@@ -110,6 +116,19 @@
         android:layout_gravity="center"
         />
 
+        <Button
+            android:id="@+id/pwcheck"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:text="확인"
+            android:textSize="10sp"
+            app:backgroundTint="#DDD3F8"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
     <TextView
         android:id="@+id/genderT"
         android:layout_width="wrap_content"
@@ -187,5 +206,6 @@
         android:text="회원가입"
         app:backgroundTint="#DDD3F8"
         app:strokeColor="#000000" />
+
 
 </LinearLayout>

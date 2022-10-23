@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item_fragment2:
                         getSupportFragmentManager().beginTransaction().replace(
-                                R.id.main_frame, new Test1Activity()).commit();
+                                R.id.main_frame, new TestActivity()).commit();
                         break;
                     case R.id.item_fragment3:
                         getSupportFragmentManager().beginTransaction().replace(
@@ -57,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onFragmentChange(int index){
+        if(index == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test1Activity()).commit();
+        }
+
+        else if(index == 2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).commit();
+        }
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
