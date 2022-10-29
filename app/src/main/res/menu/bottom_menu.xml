@@ -3,30 +3,30 @@
     <item
         android:id="@+id/item_fragment1"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_10k_24"
-        android:title="아이템1" />
+        android:icon="@drawable/luck"
+        android:title="luck" />
 
     <item
         android:id="@+id/item_fragment2"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_15mp_24"
-        android:title="아이템2" />
+        android:icon="@drawable/test"
+        android:title="test" />
 
     <item
         android:id="@+id/item_fragment3"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_18_up_rating_24"
-        android:title="아이템3" />
+        android:icon="@drawable/diary"
+        android:title="diary" />
 
     <item
         android:id="@+id/item_fragment4"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_24mp_24"
-        android:title="아이템4" />
+        android:icon="@drawable/sora1"
+        android:title="sora" />
 
     <item
         android:id="@+id/item_fragment5"
         android:enabled="true"
-        android:icon="@drawable/ic_round_crop_din_24"
-        android:title="아이템5" />
+        android:icon="@drawable/my_page"
+        android:title="My Page" />
 </menu>

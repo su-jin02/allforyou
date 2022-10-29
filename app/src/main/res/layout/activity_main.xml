@@ -23,7 +23,9 @@
         android:layout_centerHorizontal="true"
         android:background="#DDD3F8"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_menu" />
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@drawable/menu_item_color"
+        app:itemTextColor="@drawable/menu_item_color"/>
 
 </LinearLayout>
 
