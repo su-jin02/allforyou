@@ -13,9 +13,6 @@
             android:name=".MypageActivity"
             android:exported="false" />
         <activity
-            android:name=".MypageActivity1"
-            android:exported="false" />
-        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

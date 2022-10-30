@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">올 포유</string>
+    <string name="bottom_luck">오늘의운세</string>
+    <string name="bottom_sora">소라고동</string>
+    <string name="bottom_test">심리테스트</string>
+    <string name="bottom_testallresult">테스트결과</string>
+    <string name="bottom_diary">일기장</string>
 </resources>

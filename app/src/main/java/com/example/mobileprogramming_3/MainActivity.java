@@ -39,17 +39,19 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.item_fragment2:
                         getSupportFragmentManager().beginTransaction().replace(
-                                R.id.main_frame, new TestActivity()).commit();
+                                R.id.main_frame, new SoraActivity()).commit();
                         break;
                     case R.id.item_fragment3:
                         getSupportFragmentManager().beginTransaction().replace(
-                                R.id.main_frame, new DiaryActivity()).commit();
+                                R.id.main_frame, new TestActivity()).commit();
                         break;
                     case R.id.item_fragment4:
                         getSupportFragmentManager().beginTransaction().replace(
-                                R.id.main_frame, new SoraActivity()).commit();
+                                R.id.main_frame, new TestallresultActivity()).commit();
                         break;
                     case R.id.item_fragment5:
+                        getSupportFragmentManager().beginTransaction().replace(
+                                R.id.main_frame, new DiaryActivity()).commit();
                         break;
                 }
                 return true;
