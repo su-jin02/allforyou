@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:andorid="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="오늘의 운세"
+        android:textSize = "25sp"
+        android:paddingTop="50dp"
+        android:layout_gravity = "center"
+       />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity = "center"
+        android:paddingBottom="20dp">
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        andorid:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_left_24" />
+
+    <TextView
+        android:id="@+id/calendar"
+        android:text = "2022.10.11"
+        android:textSize = "18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        andorid:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_right_24" />
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="#DDD3F8"
+        />
+
+    <TextView
+        android:id="@+id/todayluck"
+        android:text = "오늘 운세"
+        android:textSize = "15sp"
+        android:gravity = "center"
+        android:layout_marginTop="10dp"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="#DDD3F8"/>
+
+    <TextView
+        android:id="@+id/todaylucktext"
+        android:text = "오늘의 운세 글귀"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="#DDD3F8"/>
+
+    <TextView
+        android:id="@+id/animalluck"
+        android:text = "띠별 운세"
+        android:layout_marginTop="10dp"
+        android:textSize = "15sp"
+        android:gravity = "center"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="#DDD3F8"/>
+
+    <TextView
+        android:id="@+id/animallucktext"
+        android:text = "띠별 운세 글귀"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="#DDD3F8"
+        />
+
+    <TextView
+        android:id="@+id/starluck"
+        android:text = "별자리 운세"
+        android:layout_marginTop="10dp"
+        android:textSize = "15sp"
+        android:gravity = "center"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="#DDD3F8"/>
+
+    <TextView
+        android:id="@+id/starlucktext"
+        android:text = "별자리 운세 글귀"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="#DDD3F8"/>
+
+
+</LinearLayout>
