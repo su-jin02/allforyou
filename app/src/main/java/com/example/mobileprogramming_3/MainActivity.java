@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +20,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        back = findViewById(R.id.back);
+        back.setOnClickListener(v -> onBackPressed() );
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new LuckActivity()).commit();
 
@@ -56,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return true;
             }
+
+
+
         });
 
     }

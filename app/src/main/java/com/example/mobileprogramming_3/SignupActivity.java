@@ -76,6 +76,8 @@ public class SignupActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
+
+
     }
 
         private void updateLabel () {
