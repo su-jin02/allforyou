@@ -25,7 +25,7 @@ import java.util.Locale;
 
 public class SignupActivity extends AppCompatActivity {
     EditText name, id, pw, pw2, email, birth;
-    Button pwcheck, submit;
+    Button pwcheck,btn1;
     Calendar myCalendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -35,6 +35,8 @@ public class SignupActivity extends AppCompatActivity {
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             updateLabel();
         }
+
+
     };
 
 
@@ -68,6 +70,12 @@ public class SignupActivity extends AppCompatActivity {
 
 
         });
+
+        btn1 = findViewById(R.id.btn1);
+        btn1.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        });
     }
 
         private void updateLabel () {
@@ -78,6 +86,8 @@ public class SignupActivity extends AppCompatActivity {
             et_date.setText(sdf.format(myCalendar.getTime()));
         }
     }
+
+
 
 
 
