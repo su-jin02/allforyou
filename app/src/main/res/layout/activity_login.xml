@@ -13,9 +13,9 @@ tools:context=".LoginActivity">
         android:layout_height="48dp"
         android:layout_marginStart="47dp"
         android:layout_marginTop="217dp"
-        android:textSize="13dp"
+        android:hint="닉네임 또는 이메일"
         android:inputType="textPersonName"
-        android:hint="닉네임 또는 이메일"/>
+        android:textSize="13dp" />
 
     <EditText
         android:id="@+id/etext2"

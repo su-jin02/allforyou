@@ -20,13 +20,13 @@
 
     <Button
         android:id="@+id/btn1"
-        andorid:weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#DDD3F8"
         android:drawableTop="@drawable/testimage"
         android:text="테스트하러 가기"
-        android:backgroundTint="#DDD3F8"
-        android:textSize = "20sp"/>
+        android:textSize="20sp"
+        andorid:weight="1" />
 
     <Button
         android:id="@+id/btn2"
