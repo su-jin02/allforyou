@@ -5,4 +5,29 @@
     <string name="bottom_test">심리테스트</string>
     <string name="bottom_testallresult">테스트결과</string>
     <string name="bottom_diary">일기장</string>
+    <string-array name="randomText">
+        <item>하지마세요</item>
+        <item>그렇게 하세요</item>
+        <item>집중하세요</item>
+        <item>아니오 그렇지 않습니다 </item>
+        <item>예 그렇습니다</item>
+        <item>더 노력하세요</item>
+        <item>신중해질 필요가 있습니다</item>
+        <item>주변의 말에 귀를 기울이세요</item>
+        <item>본인을 믿으세요</item>
+        <item>때로는 마이웨이가 답입니다</item>
+        <item>조급해 하지마세요</item>
+        <item>시간이 약입니다</item>
+        <item>본인의 일에만 신경쓰세요</item>
+        <item>서두르세요</item>
+        <item>일의 우선순위를 한번 더 생각하세요</item>
+        <item>너무 서두르지 마세요</item>
+        <item>눈치보지 마세요</item>
+        <item>너무 상처 받지 마세요</item>
+        <item>주변의 눈치를 보시길 바랍니다</item>
+        <item>받아들이세요</item>
+        <item>너무 일러요</item>
+        <item>충분해요</item>
+        <item>내 자신을 되돌아보세요</item>
+    </string-array>
 </resources>
