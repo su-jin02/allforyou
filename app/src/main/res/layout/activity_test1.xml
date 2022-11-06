@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,9 +11,7 @@
         android:text="심리 테스트1"
         android:textColor="#000000"
         android:textSize="20dp"
-        android:layout_marginStart="150dp"
-        android:id="@+id/text1"/>
-
+        android:layout_marginStart="150dp" />
     <Button
         android:layout_width="96dp"
         android:layout_height="49dp"
@@ -23,8 +20,7 @@
         android:textColor="#000000"
         android:layout_marginTop="98dp"
         android:layout_marginStart="158dp"
-        android:elevation="20dp"
-        android:id="@+id/btn1"/>
+        android:elevation="20dp"/>
 
     <TextView
         android:id="@+id/text2"
@@ -36,14 +32,14 @@
         android:gravity="center"
         android:text="질문1. 나는 누군가 대화에 참여하고 싶은 것을 쉽게 알아차릴 수 있다."
         android:textColor="#000000"
-        android:textSize="19dp" />
+        android:textSize="13dp" />
 
     <Button
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="258dp"
+        android:layout_marginTop="210dp"
         android:layout_marginStart="25dp"
         android:elevation="15dp"/>
 
@@ -51,21 +47,21 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="217dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="동의"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="270dp"
         android:layout_marginStart="38dp"/>
 
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="266dp"
+        android:layout_marginTop="218dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -74,7 +70,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="124.4dp"
-        android:layout_marginTop="271dp"
+        android:layout_marginTop="223dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -82,7 +78,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="274dp"
+        android:layout_marginTop="225dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -91,7 +87,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="194dp"
-        android:layout_marginTop="278dp"
+        android:layout_marginTop="229dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -99,7 +95,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="254dp"
-        android:layout_marginTop="266dp"
+        android:layout_marginTop="218dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -107,7 +103,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="259dp"
-        android:layout_marginTop="271dp"
+        android:layout_marginTop="223dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <Button
@@ -115,39 +111,39 @@
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="258dp"
+        android:layout_marginTop="210dp"
         android:layout_marginStart="332dp"
         android:elevation="15dp" />
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="339.8dp"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="217dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비동의"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="270dp"
         android:layout_marginStart="341dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
         android:text="   질문2. 주기적으로 새로운 친구를 만난다."
         android:textColor="#000000"
-        android:textSize="19dp" />
+        android:textSize="13dp" />
     <Button
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="330dp"
         android:layout_marginStart="25dp"
         android:elevation="15dp"/>
 
@@ -155,21 +151,21 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="337dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="동의"
-        android:layout_marginTop="479dp"
+        android:layout_marginTop="390dp"
         android:layout_marginStart="38dp"/>
 
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="340dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -178,7 +174,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="124.4dp"
-        android:layout_marginTop="433dp"
+        android:layout_marginTop="346dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -186,7 +182,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="433dp"
+        android:layout_marginTop="346dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -195,7 +191,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="194dp"
-        android:layout_marginTop="438dp"
+        android:layout_marginTop="350dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -203,7 +199,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="254dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="340dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -211,7 +207,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="259dp"
-        android:layout_marginTop="433dp"
+        android:layout_marginTop="346dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <Button
@@ -219,38 +215,38 @@
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="330dp"
         android:layout_marginStart="332dp"
         android:elevation="15dp"/>
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="339.8dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="337dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비동의"
-        android:layout_marginTop="479dp"
+        android:layout_marginTop="390dp"
         android:layout_marginStart="341dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="질문3. 일이 잘못될 때를 대비해 여러 대비책을 세우는 편이다."
-        android:layout_marginTop="525dp"
-        android:textSize="19dp"
+        android:layout_marginTop="430dp"
+        android:textSize="13dp"
         android:textColor="#000000"
         android:gravity="center"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="20dp"/>
     <Button
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="460dp"
         android:layout_marginStart="25dp"
         android:elevation="15dp"/>
 
@@ -258,21 +254,21 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="467dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="동의"
-        android:layout_marginTop="655dp"
+        android:layout_marginTop="526dp"
         android:layout_marginStart="38dp"/>
 
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="467dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -281,7 +277,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="124.4dp"
-        android:layout_marginTop="605dp"
+        android:layout_marginTop="472dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -289,7 +285,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="605dp"
+        android:layout_marginTop="472dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -298,7 +294,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="194dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginTop="476dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
 
@@ -306,7 +302,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="254dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="467dp"
         android:background="@drawable/circle_shape_button"
         android:elevation="15dp"
         app:backgroundTint="@null" />
@@ -314,7 +310,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="259dp"
-        android:layout_marginTop="605dp"
+        android:layout_marginTop="472dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <Button
@@ -322,23 +318,22 @@
         android:layout_height="55dp"
         android:background="@drawable/circle_shape_button"
         app:backgroundTint="@null"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="460dp"
         android:layout_marginStart="332dp"
         android:elevation="15dp"/>
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="339.8dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="467dp"
         android:background="@drawable/circle_shape_small_btn"
         app:backgroundTint="@null" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비동의"
-        android:layout_marginTop="655dp"
+        android:layout_marginTop="526dp"
         android:layout_marginStart="341dp"/>
-
 
 
 
