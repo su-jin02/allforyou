@@ -2,7 +2,10 @@ package com.example.mobileprogramming_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class MypageActivity extends AppCompatActivity {
 
@@ -10,5 +13,15 @@ public class MypageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
+
+        ImageButton mypgbackBtn = (ImageButton) findViewById(R.id.mypgbackBtn);
+
+        mypgbackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 }

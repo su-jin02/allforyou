@@ -20,18 +20,30 @@
             android:background="#CDBAFF"
             android:orientation="vertical">
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-                android:layout_marginRight="15dp"
-                android:text="My Page"
-                android:textSize="20dp"
-                android:drawableRight="@drawable/layer_list2"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Page"
+                    android:textSize="20dp"
+                    android:layout_marginRight="255dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/mypgbackBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/layer_list2"
+                    />
+
+        </LinearLayout>
 
 
 
