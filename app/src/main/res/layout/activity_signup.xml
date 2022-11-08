@@ -96,26 +96,25 @@
         android:text="비밀번호 확인*"
         android:textSize="15sp" />
 
-
     <LinearLayout
-    android:layout_width="320dp"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="28dp"
-    android:orientation="horizontal">
-
-
-    <EditText
-        android:id="@+id/pw2"
-        android:layout_width="258dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:hint="비밀번호 확인"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:background="#FFFFFF"
-        android:elevation="5dp"
-        android:textSize="15sp"
-        android:layout_gravity="center"
-        />
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/pw2"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:elevation="5dp"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            />
 
         <Button
             android:id="@+id/pwcheck"
@@ -144,7 +143,7 @@
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginBottom="10dp"
         android:background="#FFFFFF"
         android:elevation="5dp"
