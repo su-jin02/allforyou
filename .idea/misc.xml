@@ -3,21 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/2022/MP/app/src/main/res/drawable/edge.xml" value="0.1235" />
         <entry key="..\:/2022/MP/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1145" />
-        <entry key="..\:/2022/MP/app/src/main/res/drawable/ic_baseline_arrow_left_24.xml" value="0.1175" />
-        <entry key="..\:/2022/MP/app/src/main/res/drawable/ic_baseline_arrow_right_24.xml" value="0.1235" />
-        <entry key="..\:/2022/MP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_diary.xml" value="0.1707193515704154" />
-        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_diaryin1.xml" value="0.1707193515704154" />
         <entry key="..\:/2022/MP/app/src/main/res/layout/activity_login.xml" value="0.16944444444444445" />
-        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_luck.xml" value="0.10465116279069768" />
+        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_luck.xml" value="0.1" />
         <entry key="..\:/2022/MP/app/src/main/res/layout/activity_mypage.xml" value="0.1" />
-        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_sora.xml" value="0.1" />
-        <entry key="..\:/2022/MP/app/src/main/res/layout/activity_test1result.xml" value="0.13858695652173914" />
         <entry key="..\:/2022/MP/app/src/main/res/layout/activity_test2.xml" value="0.16944444444444445" />
         <entry key="..\:/Users/multi-02/edu.sungshin_AllForYou/MP/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable-v24/line.xml" value="0.1" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.291" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/ic_baseline_arrow_right_24.xml" value="0.291" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/ic_outline_fact_check_24.xml" value="0.291" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/menu_item_color.xml" value="0.1" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/my_page.xml" value="0.2" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/drawable/sora.xml" value="0.1125" />
@@ -39,9 +34,13 @@
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/layout/menu1.xml" value="0.3359375" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/layout/picker.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/layout/year_month_picker.xml" value="0.309375" />
-        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/bottom_menu.xml" value="0.33" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/my_navigation_items.xml" value="0.33958333333333335" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/toolbar.xml" value="0.3359375" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/toolbar_menu.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/menu/top_menu.xml" value="0.33958333333333335" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.196" />
+        <entry key="..\:/Users/somin/MobileProgramming_3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.196" />
       </map>
     </option>
   </component>

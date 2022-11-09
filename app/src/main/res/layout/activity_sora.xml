@@ -27,10 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
         android:layout_marginBottom="77dp"
-        android:layout_marginLeft="157dp"
+        android:layout_marginLeft="151dp"
         android:text="소라고동"
-
-        android:textSize="25dp"/>
+        android:textColor="#000000"
+        android:textSize="20dp"/>
 
     <ImageView
         android:id="@+id/imageV"

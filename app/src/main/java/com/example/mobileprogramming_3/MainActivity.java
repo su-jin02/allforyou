@@ -8,10 +8,12 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,15 +22,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    Button back;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        back = findViewById(R.id.back);
-        back.setOnClickListener(v -> onBackPressed() );
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new LuckActivity()).commit();
 
@@ -79,14 +83,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.mypage_menu:
                 Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
                 startActivity(intent);
-                return true;
+                break;
+
+            case android.R.id.home: { //toolbar의 back키 눌렀을 때 동작
+                finish();
+                break;
+            }
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
+
 
     public void onFragmentChange(int index){
         if(index == 1){
