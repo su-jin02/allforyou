@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/mypage_menu"
-        android:background="#4B0082"
+        android:background="#DDD3F8"
         android:title="My page"
         />
 
