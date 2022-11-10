@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mobileprogramming_3">
+    package="com.example.Allforyou">
 
     <application
         android:allowBackup="true"
@@ -11,11 +11,11 @@
         android:theme="@style/Theme.MobileProgramming_3"
         >
         <activity
-            android:name=".MypageActivity"
+            android:name="com.example.Allforyou.MypageActivity"
             android:exported="false" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.example.Allforyou.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +24,8 @@
 
         </activity>
 
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".MainActivity"
+        <activity android:name="com.example.Allforyou.SignupActivity" />
+        <activity android:name="com.example.Allforyou.MainActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
 
     </application>

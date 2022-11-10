@@ -1,4 +1,4 @@
-package com.example.mobileprogramming_3;
+package com.example.Allforyou;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;

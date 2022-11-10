@@ -1,4 +1,4 @@
-package com.example.mobileprogramming_3;
+package com.example.Allforyou;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,7 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

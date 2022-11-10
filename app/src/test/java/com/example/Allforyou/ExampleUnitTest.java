@@ -1,4 +1,4 @@
-package com.example.mobileprogramming_3;
+package com.example.Allforyou;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.mobileprogramming_3;
+package com.example.Allforyou;
 
 public class Test2Activity {
 }

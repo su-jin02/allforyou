@@ -1,4 +1,4 @@
 package com.example.Allforyou;
 
-public class SignupActivity {
+public class DiaryIn1Activity {
 }
