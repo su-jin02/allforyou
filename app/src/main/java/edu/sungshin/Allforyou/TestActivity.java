@@ -1,4 +1,4 @@
-package com.example.Allforyou;
+package edu.sungshin.Allforyou;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 
 public class TestActivity extends  Fragment {
-    MainActivity activity;
+    edu.sungshin.Allforyou.MainActivity activity;
 
     @Override
     public void onAttach(Context context){

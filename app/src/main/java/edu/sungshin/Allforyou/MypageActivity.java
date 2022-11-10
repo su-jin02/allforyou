@@ -1,10 +1,10 @@
-package com.example.Allforyou;
-
-import androidx.appcompat.app.AppCompatActivity;
+package edu.sungshin.Allforyou;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MypageActivity extends AppCompatActivity {
 

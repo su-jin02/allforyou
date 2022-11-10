@@ -1,4 +1,4 @@
-package com.example.Allforyou;
+package edu.sungshin.Allforyou;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

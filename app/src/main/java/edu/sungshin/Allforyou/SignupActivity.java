@@ -1,4 +1,4 @@
-package com.example.Allforyou;
+package edu.sungshin.Allforyou;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -8,11 +8,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import edu.sungshin.Allforyou.LoginActivity;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 
 public class SignupActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.Allforyou;
+package edu.sungshin.Allforyou;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,11 +9,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-
-import androidx.annotation.NonNull;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new LuckActivity()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new edu.sungshin.Allforyou.LuckActivity()).commit();
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
