@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".LoginActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/etext1"
@@ -56,41 +56,28 @@ tools:context=".LoginActivity">
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="420dp"
-        android:backgroundTint="#FEE600"
-        android:drawableLeft="@drawable/kakao"
+        android:backgroundTint="#FFFFFF"
+        android:drawableLeft="@drawable/google"
         android:elevation="20dp"
         android:paddingLeft="55dp"
         android:paddingRight="55dp"
-        android:text="카카오톡으로 시작하기"
+        android:text="구글로 시작하기"
         android:textColor="#000000" />
 
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="318dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="470dp"
-        android:backgroundTint="#03D55F"
-        android:drawableLeft="@drawable/naver"
-        android:elevation="20dp"
-        android:paddingLeft="55dp"
-        android:paddingRight="55dp"
-        android:text="네이버로 시작하기"
-        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="500dp"
         android:text="아이디 찾기  |" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="비밀번호 찾기  |"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="500dp"
         android:id="@+id/text3"
         android:layout_marginStart="140dp"/>
 
@@ -99,16 +86,9 @@ tools:context=".LoginActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="238dp"
-        android:layout_marginTop="532dp"
+        android:layout_marginTop="500dp"
         android:text="회원가입 하기"
         android:clickable="true"
         android:focusable="true"
-         />
-
-
-
-
-
-
-
+        />
 </RelativeLayout>
