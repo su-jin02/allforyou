@@ -13,6 +13,7 @@ plugins {
     id 'com.android.application' version '7.1.0-rc01' apply false
     id 'com.android.library' version '7.1.0-rc01' apply false
 }
+<<<<<<< HEAD
 
 
 
@@ -21,4 +22,9 @@ task clean(type: Delete) {
 }
 
 
+=======
+task clean(type: Delete) {
+    delete rootProject.buildDir
+ }
+>>>>>>> a5dedbd55bd25f9ad0bce18879204a5d0e5e9834
 
