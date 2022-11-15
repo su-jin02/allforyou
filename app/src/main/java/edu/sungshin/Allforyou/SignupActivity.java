@@ -9,6 +9,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,6 +31,7 @@ public class SignupActivity extends AppCompatActivity {
     EditText name, id, pw, pw2, email, birth;
     Button pwcheck,btn1;
     Calendar myCalendar = Calendar.getInstance();
+
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference mdatabase = database.getReference();
@@ -79,7 +81,15 @@ public class SignupActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(v -> {
 
-            writeNewUser(name.getText().toString());
+            String getname = name.getText().toString();
+            String getpw = pw.getText().toString();
+
+            //hashmap 만들기
+            HashMap result = new HashMap<>();
+            result.put("name", getname);
+            result.put("email", getpw);
+
+            writeNewUser("user",getname,getpw);
 
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
@@ -96,9 +106,24 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setText(sdf.format(myCalendar.getTime()));
     }
 
-    private void writeNewUser(String name) {
+
+    private void writeNewUser(String userid, String name, String pw) {
         User user = new User(name);
-        mdatabase.child("users").child(name).setValue(user);
+        mdatabase.child("users").child(userid).setValue(user)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                        Toast.makeText(SignupActivity.this, "회원가입 실패", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
     }
 
