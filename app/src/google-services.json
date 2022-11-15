@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528179499489",
+    "project_id": "allforyou-2c5eb",
+    "storage_bucket": "allforyou-2c5eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528179499489:android:ca5a5476abceb26ed982a0",
+        "android_client_info": {
+          "package_name": "edu.sungshin.Allforyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528179499489-r4rbvqa8da55qkfqf1rq7pcsjop9183a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcTYLzfa966gQorOa6-lD_j0v0LUg0oDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528179499489-r4rbvqa8da55qkfqf1rq7pcsjop9183a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

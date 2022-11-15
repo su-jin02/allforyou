@@ -11,17 +11,30 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.auth.User;
+
 import edu.sungshin.Allforyou.LoginActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
 
 
 public class SignupActivity extends AppCompatActivity {
+
     EditText name, id, pw, pw2, email, birth;
     Button pwcheck,btn1;
     Calendar myCalendar = Calendar.getInstance();
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference mdatabase = database.getReference();
+
+
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -30,8 +43,6 @@ public class SignupActivity extends AppCompatActivity {
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             updateLabel();
         }
-
-
     };
 
 
@@ -55,7 +66,6 @@ public class SignupActivity extends AppCompatActivity {
 
 
         pwcheck = findViewById(R.id.pwcheck);
-
         pwcheck.setOnClickListener(v -> {
             if (pw.getText().toString().equals(pw2.getText().toString())) {
                 pwcheck.setText("일치");
@@ -68,6 +78,9 @@ public class SignupActivity extends AppCompatActivity {
 
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(v -> {
+
+            writeNewUser(name.getText().toString());
+
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
@@ -75,14 +88,21 @@ public class SignupActivity extends AppCompatActivity {
 
     }
 
-        private void updateLabel () {
-            String myFormat = "yyyy/MM/dd";
-            SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
+    private void updateLabel () {
+        String myFormat = "yyyy/MM/dd";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
 
-            EditText et_date = (EditText) findViewById(R.id.birth);
-            et_date.setText(sdf.format(myCalendar.getTime()));
-        }
+        EditText et_date = (EditText) findViewById(R.id.birth);
+        et_date.setText(sdf.format(myCalendar.getTime()));
     }
+
+    private void writeNewUser(String name) {
+        User user = new User(name);
+        mdatabase.child("users").child(name).setValue(user);
+
+    }
+
+}
 
 
 
