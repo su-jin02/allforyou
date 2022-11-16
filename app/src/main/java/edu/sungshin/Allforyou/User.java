@@ -1,5 +1,6 @@
 package edu.sungshin.Allforyou;
 
+/*
 public class User {
     String name;
     String pw;
@@ -36,3 +37,4 @@ public class User {
 
 
 }
+*/
