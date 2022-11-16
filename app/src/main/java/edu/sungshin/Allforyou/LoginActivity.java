@@ -44,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String stremail = etext1.getText().toString();
-                String strpw = etext2.getText().toString();
+                String stremail = etext1.getText().toString().trim();
+                String strpw = etext2.getText().toString().trim();
 
                 mFirebaseAuth.signInWithEmailAndPassword(stremail, strpw).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -65,8 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 
-                //Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                //startActivity(intent);
             }
         });
 

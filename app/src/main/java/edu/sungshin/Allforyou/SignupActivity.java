@@ -93,8 +93,8 @@ public class SignupActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String stremail = email.getText().toString();
-                String strpw = pw.getText().toString();
+                String stremail = email.getText().toString().trim();
+                String strpw = pw.getText().toString().trim();
 
                 mFirebaseAuth.createUserWithEmailAndPassword(stremail, strpw).addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -126,19 +126,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-
-            /*
-            //hashmap 만들기
-            HashMap result = new HashMap<>();
-            result.put("name", getname);
-            result.put("email", getpw);
-
-            writeNewUser("user",getname,getpw);
-
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
-            */
-
     }
 
     private void updateLabel () {
@@ -149,27 +136,6 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setText(sdf.format(myCalendar.getTime()));
     }
 
-    /*
-    private void writeNewUser(String userid, String name, String pw) {
-        User user = new User(name);
-        mdatabase.child("users").child(userid).setValue(user)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-
-                        Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                        Toast.makeText(SignupActivity.this, "회원가입 실패", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-    }
-    */
 }
 
 
