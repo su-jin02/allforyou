@@ -72,8 +72,10 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-
+        btn1 = findViewById(R.id.btn1);
         pwcheck = findViewById(R.id.pwcheck);
+
+
         pwcheck.setOnClickListener(v -> {
             if (pw.getText().toString().equals(pw2.getText().toString())) {
                 pwcheck.setText("일치");
@@ -91,6 +93,7 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String stremail = email.getText().toString().trim();
                 String strpw = pw.getText().toString().trim();
+                //String strname = name.getText().toString().trim();
 
                 mFirebaseAuth.createUserWithEmailAndPassword(stremail, strpw).addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -99,8 +102,12 @@ public class SignupActivity extends AppCompatActivity {
                         //가입 성공시
                         if (task.isSuccessful()) {
                             FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser(); // firebaseUser에 현재 사용자 가져오기
+                            String strname = name.getText().toString().trim();
                             UserAccount user = new UserAccount();
+                            //String email = user.getEmailId();
+                            //String uid = user.getUid();
                             user.setIdToken(firebaseUser.getUid());
+                            //user.setUserName(strname);
                             user.setEmailId(firebaseUser.getEmail());
                             user.setPw(strpw);
 
@@ -121,6 +128,8 @@ public class SignupActivity extends AppCompatActivity {
                 });
             }
         });
+
+
 
     }
 

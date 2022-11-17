@@ -8,6 +8,10 @@ public class UserAccount {
 
     public UserAccount() { }
 
+    public String getUserName(){return name;}
+
+    public void setUserName(String name){this.name = name;}
+
     public String getIdToken(){return idToken;}
 
     public void setIdToken(String idToken){this.idToken = idToken;}
