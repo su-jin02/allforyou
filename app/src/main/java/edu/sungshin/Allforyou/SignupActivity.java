@@ -40,10 +40,6 @@ public class SignupActivity extends AppCompatActivity {
     Calendar myCalendar = Calendar.getInstance();
 
 
-    //private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //private DatabaseReference mdatabase = database.getReference();
-
-
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
