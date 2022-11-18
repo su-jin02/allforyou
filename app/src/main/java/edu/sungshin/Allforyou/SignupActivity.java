@@ -132,17 +132,18 @@ public class SignupActivity extends AppCompatActivity {
                                 FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
                                 String stremail = firebaseUser.getEmail();
                                 String uid = firebaseUser.getUid();
+                                String strbirth = et_date.getText().toString().trim();
                                 String strname = name.getText().toString().trim();
                                 String strpw = pw.getText().toString().trim();
 
                                 HashMap<Object, String> hashMap = new HashMap<>();
                                 hashMap.put("uid", uid);
+                                hashMap.put("birth", strbirth);
                                 hashMap.put("email", stremail);
                                 hashMap.put("name", strname);
                                 hashMap.put("pw", strpw);
 
                                 mDatabaseRef.child(uid).setValue(hashMap);
-
 
                                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                                 startActivity(intent);
