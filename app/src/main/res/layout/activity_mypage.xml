@@ -43,39 +43,54 @@
                     android:src="@drawable/layer_list2"
                     />
 
-        </LinearLayout>
+            </LinearLayout>
 
-
-
-            <TextView
-                android:id="@+id/btn1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:drawableLeft="@drawable/layer_list"
-                android:layout_marginLeft="25dp"
-                android:text="   이름 : 김수룡 \n   생일 : 2002.01.01 \n   성별 : 여자"
-                android:lineSpacingExtra="5dp"
-                android:drawablePadding="15dp"
-                android:textSize="17dp"/>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:src= "@drawable/layer_list"
+                    android:layout_marginLeft="9dp"/>
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="   이름 :    \n   생일 :    \n   성별 :    "
+                    android:textSize="30dp"/>
 
 
-            <EditText
-                android:layout_width="375dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint = "#DDD3F8"
-                android:hint="나의 한 줄 소개"
-                android:textSize="18dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:orientation="vertical">
 
-            <EditText
-                android:layout_width="375dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint = "#DDD3F8"
-                android:hint=" MBTI"
-                android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:id="@+id/birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

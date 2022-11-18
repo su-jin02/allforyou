@@ -31,6 +31,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class SignupActivity extends AppCompatActivity {
@@ -128,7 +130,6 @@ public class SignupActivity extends AppCompatActivity {
 
                             //가입 성공시
                             if (task.isSuccessful()) {
-
                                 FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
                                 String stremail = firebaseUser.getEmail();
                                 String uid = firebaseUser.getUid();
@@ -171,6 +172,16 @@ public class SignupActivity extends AppCompatActivity {
 
         EditText et_date = (EditText) findViewById(R.id.birth);
         et_date.setText(sdf.format(myCalendar.getTime()));
+    }
+
+    //비밀번호 유효성 검사
+   void check_validation(String password) {
+
+       if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&]).{8,15}.$", password))
+       {
+           Toast.makeText(SignupActivity.this,"숫자, 문자, 특수문자 모두 포함 (8~15자)로 설정해주세요",Toast.LENGTH_SHORT).show();
+       }
+
     }
 
 }
