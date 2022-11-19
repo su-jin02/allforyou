@@ -7,12 +7,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.auth.User;
@@ -23,16 +31,20 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class SignupActivity extends AppCompatActivity {
 
+    private FirebaseAuth mFirebaseAuth;
+    private DatabaseReference mDatabaseRef;
     EditText name, id, pw, pw2, email, birth;
     Button pwcheck,btn1;
+    RadioGroup radio_group;
+    RadioButton radio_button_man, radio_button_woman, radio_button_else;
     Calendar myCalendar = Calendar.getInstance();
 
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference mdatabase = database.getReference();
 
 
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
@@ -55,6 +67,14 @@ public class SignupActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         pw = findViewById(R.id.pw1);
         pw2 = findViewById(R.id.pw2);
+        radio_group = findViewById(R.id.radio_group);
+        radio_button_man = findViewById(R.id.radio_button_man);
+        radio_button_woman = findViewById(R.id.radio_button_woman);
+        radio_button_else = findViewById(R.id.radio_button_else);
+        EditText et_date = (EditText) findViewById(R.id.birth);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("User");
 
         EditText et_Date = (EditText) findViewById(R.id.birth);
         et_Date.setOnClickListener(new View.OnClickListener() {
@@ -64,28 +84,86 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-
+        btn1 = findViewById(R.id.btn1);
         pwcheck = findViewById(R.id.pwcheck);
+
         pwcheck.setOnClickListener(v -> {
             if (pw.getText().toString().equals(pw2.getText().toString())) {
                 pwcheck.setText("일치");
             } else {
                 Toast.makeText(SignupActivity.this, "비밀번호가 다릅니다.", Toast.LENGTH_LONG).show();
             }
-
-
         });
+
+        /*
+        radio_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch(radio_group.getCheckedRadioButtonId()){
+                    case R.id.radio_button_man:
+                        break;
+                    case R.id.radio_button_woman:
+                        break;
+                    case R.id.radio_button_else:
+                        break;
+                }
+            }
+        });
+
+         */
 
         btn1 = findViewById(R.id.btn1);
-        btn1.setOnClickListener(v -> {
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-            writeNewUser(name.getText().toString());
+                String stremail = email.getText().toString().trim();
+                String strpw = pw.getText().toString().trim();
+                String strpw2 = pw2.getText().toString().trim();
+                String strbirth = et_date.getText().toString().trim();
+                radio_group = findViewById(R.id.radio_group);
 
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+                if (strpw.equals(strpw2) && (strbirth.length() != 0) && (radio_group.getCheckedRadioButtonId() != 0)) {
+                    mFirebaseAuth.createUserWithEmailAndPassword(stremail, strpw).addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            //가입 성공시
+                            if (task.isSuccessful()) {
+                                FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+                                String stremail = firebaseUser.getEmail();
+                                String uid = firebaseUser.getUid();
+                                String strbirth = et_date.getText().toString().trim();
+                                String strname = name.getText().toString().trim();
+                                String strpw = pw.getText().toString().trim();
+
+                                HashMap<Object, String> hashMap = new HashMap<>();
+                                hashMap.put("uid", uid);
+                                hashMap.put("birth", strbirth);
+                                hashMap.put("email", stremail);
+                                hashMap.put("name", strname);
+                                hashMap.put("pw", strpw);
+
+                                mDatabaseRef.child(uid).setValue(hashMap);
+
+                                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+
+                                Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+
+                            } else {
+
+                                Toast.makeText(SignupActivity.this, "회원가입 실패", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                } else {
+                    Toast.makeText(SignupActivity.this, "비밀번호가 다릅니다.", Toast.LENGTH_LONG).show();
+                }
+            }
         });
-
-
     }
 
     private void updateLabel () {
@@ -96,9 +174,13 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setText(sdf.format(myCalendar.getTime()));
     }
 
-    private void writeNewUser(String name) {
-        User user = new User(name);
-        mdatabase.child("users").child(name).setValue(user);
+    //비밀번호 유효성 검사
+   void check_validation(String password) {
+
+       if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&]).{8,15}.$", password))
+       {
+           Toast.makeText(SignupActivity.this,"숫자, 문자, 특수문자 모두 포함 (8~15자)로 설정해주세요",Toast.LENGTH_SHORT).show();
+       }
 
     }
 
