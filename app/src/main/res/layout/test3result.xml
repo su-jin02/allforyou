@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <TextView
+        android:background="#DDD3F8"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="지붕"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r11"
+            android:checked="true"
+            android:text="지붕이 지나치게 큰 경우"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r12"
+            android:text="지붕을 강조해서 그린 경우"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r13"
+            android:text="지붕을 정교하게 그린 경우"/>
+    </RadioGroup>
+
+    <TextView
+        android:background="#DDD3F8"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="굴뚝"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/r21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="굴뚝에서 연기가 나는 경우"/>
+        <RadioButton
+            android:id="@+id/r22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="굴뚝에 벽돌무늬를 그린 경우"/>
+    </RadioGroup>
+
+    <TextView
+        android:background="#DDD3F8"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:text="집을 보는 관점"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/r31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="위에서 내려다본 모습"/>
+        <RadioButton
+            android:id="@+id/r32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아래에서 올려다본 모습"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r33"
+            android:text="나무 사이에 있는 모습"/>
+        <RadioButton
+            android:id="@+id/r34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나무 위에 올라가 있는 모습"/>
+
+    </RadioGroup>
+
+</LinearLayout>

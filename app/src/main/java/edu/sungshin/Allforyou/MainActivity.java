@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
         });
 
     }
@@ -84,12 +83,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mypage_menu:
                 Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
                 startActivity(intent);
-                break;
+                return true;
 
-            case android.R.id.home: { //toolbar의 back키 눌렀을 때 동작
+            case android.R.id.home: {
                 finish();
-                break;
+                return true;
             }
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
         else if(index == 2){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).commit();
+        }
+        else if(index == 3){
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).commit();
         }
     }
 

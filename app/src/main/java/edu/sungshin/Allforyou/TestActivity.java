@@ -31,6 +31,7 @@ public class TestActivity extends  Fragment {
 
         Button btn1 = (Button) rootview.findViewById(R.id.btn1);
         Button btn2 = (Button) rootview.findViewById(R.id.btn2);
+        Button btn3 = (Button) rootview.findViewById(R.id.btn3);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,10 +48,13 @@ public class TestActivity extends  Fragment {
             }
         });
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                activity.onFragmentChange(3);
+            }
+        });
 
         return rootview;
     }
-
-
-
 }
