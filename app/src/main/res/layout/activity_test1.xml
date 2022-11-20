@@ -1,344 +1,398 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
-        android:text="심리 테스트1"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:layout_marginStart="150dp" />
-    <Button
-        android:layout_width="96dp"
-        android:layout_height="49dp"
-        android:backgroundTint="#DDD3F8"
-        android:text="EQ TEST"
-        android:textColor="#000000"
-        android:layout_marginTop="98dp"
-        android:layout_marginStart="153dp"
-        android:elevation="20dp"/>
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:text="질문1. 나는 누군가 대화에 참여하고 싶은 것을 쉽게 알아차릴 수 있다."
-        android:textColor="#000000"
-        android:textSize="13dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:text="대학생 캐릭터 테스트"
+            android:textSize="27dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00ffff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#학교에서 나는 어떤 유형일까?"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. 당신이 과제할 때 생각지도 못한 난관에 부딪혔다! 과제 제출까지 3시간 남은 상태. 당신의 선택은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="21dp"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:backgroundTint="#00bfff"
+            android:textColor="#000000"
+            android:id="@+id/btn1"
+            android:text="바로 침착한 상태를 유지하며 일단 과제를 다시 해본다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:backgroundTint="#ddd3f8"
+            android:textColor="#000000"
+            android:id="@+id/btn2"
+            android:text="자신에게 왜 이런 일이 일어났는지에 대해 생각하고 체념하고 난 후 다시 과제를 한다."
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="55dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. 학교에서 당신의 유형과 더 가까운 것은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:id="@+id/btn3"
+            android:text="주변인의 생일, 특징등을 잘 외운다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
 
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="210dp"
-        android:layout_marginStart="12dp"
-        android:elevation="15dp"/>
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#ddd3f8"
+            android:text="주변인에게 크게 신경쓰지 않는다."
+            android:textColor="#000000" />
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="217dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="동의"
-        android:layout_marginTop="270dp"
-        android:layout_marginStart="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:text="3. 학교에 나에 대한 안 좋은 소문이 돌기 시작한다. 나의 반응은?"
+            android:textColor="#000000"
+            android:textSize="21dp" />
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="218dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="아예 신경쓰지 않는다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn5"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="주변인의 시선을 신경쓴다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn6"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. 당신이 선호하는 교육의 유형은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="기존에 이어져오던 교육"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn7"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="완전 새로운 유형의 교육"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn8"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. 자신의 성적이 좋았을 때 나의 반응은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="정말 친한 주변 지인에게만 알린다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn9"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="동네방네 자랑하면서 다닌다."
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:id="@+id/btn10"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. 당신의 친구가 당신을 뒷답하는 것을 직접 듣게 되었다. 당신의 반응은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="바로 따진다."
+            android:id="@+id/btn11"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="모른체하고 손절한다."
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn12"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. 더 최악의 팀원은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="나무위키 그대로 복사해 오는 팀원"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn13"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="단톡 안 읽는 팀원"
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn14"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. 당신이 되고 싶은 선배 스타일은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="후배를 극진히 챙겨주는 선배"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn15"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="후배에게 아무런 관심 없는 선배"
+            android:id="@+id/btn16"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. 당신이 원하는 도착 시간은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="수업 시간에 딱 맞춰 도착한다."
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn17"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="수업 시간 10분 전"
+            android:id="@+id/btn18"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. 당신의 새학기 스타일은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="친구에게 먼저 다가간다."
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn19"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="그냥 가만히 있는다."
+            android:id="@+id/btn20"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. 당신이 사귀고 싶은 친구 유형은?"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"
+            android:textSize="21dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="정서적,감정적으로 위로해 줄 수 있는 친구"
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn21"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="냉철하고 객관적이지만 가끔은 따뜻하게 대해주는 츤데레 같은 친구"
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn22"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. 당신의 과제 제출 스타일은?"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="적어도 데드라인 5일 전에는 제출한다."
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn23"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#00bfff"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="데드라인 5분전에 급하게 제출한다."
+            android:layout_marginStart="55dp"
+            android:id="@+id/btn24"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:backgroundTint="#ddd3f8"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="당신의 대학생 캐릭터 유형은"
+                android:textColor="#000000"
+                android:textSize="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:id="@+id/text2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:id="@+id/text1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:id="@+id/text3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#000000"
+                android:id="@+id/text4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입니다."
+                android:textColor="#000000"
+                android:textSize="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
 
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="111.4dp"
-        android:layout_marginTop="223dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="225dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="229dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="241dp"
-        android:layout_marginTop="218dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="246dp"
-        android:layout_marginTop="223dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="210dp"
-        android:layout_marginStart="319dp"
-        android:elevation="15dp" />
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="326.8dp"
-        android:layout_marginTop="217dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비동의"
-        android:layout_marginTop="270dp"
-        android:layout_marginStart="328dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:text="질문2. 주기적으로 새로운 친구를 만난다."
-        android:textColor="#000000"
-        android:textSize="13dp" />
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="330dp"
-        android:layout_marginStart="12dp"
-        android:elevation="15dp"/>
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="337dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="동의"
-        android:layout_marginTop="390dp"
-        android:layout_marginStart="25dp"/>
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="340dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="111.4dp"
-        android:layout_marginTop="346dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="346dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="350dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="241dp"
-        android:layout_marginTop="340dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="246dp"
-        android:layout_marginTop="346dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="330dp"
-        android:layout_marginStart="319dp"
-        android:elevation="15dp"/>
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="326.8dp"
-        android:layout_marginTop="337dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비동의"
-        android:layout_marginTop="390dp"
-        android:layout_marginStart="328dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="질문3. 일이 잘못될 때를 대비해 여러 대비책을 세우는 편이다."
-        android:layout_marginTop="430dp"
-        android:textSize="13dp"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="460dp"
-        android:layout_marginStart="12dp"
-        android:elevation="15dp"/>
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="467dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="동의"
-        android:layout_marginTop="526dp"
-        android:layout_marginStart="25dp"/>
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="467dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="111.4dp"
-        android:layout_marginTop="472dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="472dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="181dp"
-        android:layout_marginTop="476dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="241dp"
-        android:layout_marginTop="467dp"
-        android:background="@drawable/circle_shape_button"
-        android:elevation="15dp"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="246dp"
-        android:layout_marginTop="472dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <Button
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@drawable/circle_shape_button"
-        app:backgroundTint="@null"
-        android:layout_marginTop="460dp"
-        android:layout_marginStart="319dp"
-        android:elevation="15dp"/>
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="326.8dp"
-        android:layout_marginTop="467dp"
-        android:background="@drawable/circle_shape_small_btn"
-        app:backgroundTint="@null" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="비동의"
-        android:layout_marginTop="526dp"
-        android:layout_marginStart="328dp"/>
 
 
-
-
-
-
-
-</RelativeLayout>
+</ScrollView>
