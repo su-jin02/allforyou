@@ -36,6 +36,22 @@ public class MypageActivity extends AppCompatActivity {
 
         auth= FirebaseAuth.getInstance();
 
+        mDatabaseRef.child(auth.getCurrentUser().getUid()).child("birth").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String userbirth = dataSnapshot.getValue(String.class);
+
+//                Log.v("test", String.valueOf(group));
+                mybirth.setText(userbirth);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+            }
+        });
+
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("name").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -46,11 +62,31 @@ public class MypageActivity extends AppCompatActivity {
 
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
             }
         });
+
+        mDatabaseRef.child(auth.getCurrentUser().getUid()).child("sex").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String usersex = dataSnapshot.getValue(String.class);
+
+//                Log.v("test", String.valueOf(group));
+                mygender.setText(usersex);
+
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+            }
+        });
+
+
 
         mypgbackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
