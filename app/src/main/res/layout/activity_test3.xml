@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/baseLayout"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#CDBAFF"
+       android:gravity="center"
+       android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/btnTh"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:text="얇음"
+          android:background="#DDD3F8"/>
+
+      <RadioGroup
+          android:id="@+id/radioGroup"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/btnRed"
+             android:checked="true"
+             android:text="RED"/>
+
+         <RadioButton
+             android:id="@+id/btnGreen"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="GREEN" />
+         <RadioButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/btnBlue"
+             android:text="BLUE"/>
+      </RadioGroup>
+
+      <Button
+          android:id="@+id/btnClear"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:text="지우기"
+          android:background="#DDD3F8"/>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/paintLayout"
+       android:layout_width="match_parent"
+       android:layout_height="600dp"
+       android:orientation="vertical">
+   </LinearLayout>
+
+
+   <LinearLayout
+       android:id="@+id/result"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+   <Button
+       android:id="@+id/btnresult"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="5dp"
+       android:background="#CDBAFF"
+       android:text="RESULT"/>
+</LinearLayout>
+
+</LinearLayout>

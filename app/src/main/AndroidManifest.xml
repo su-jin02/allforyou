@@ -30,6 +30,12 @@
         <activity android:name="edu.sungshin.Allforyou.SignupActivity" />
         <activity android:name="edu.sungshin.Allforyou.MainActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+        <activity android:name="edu.sungshin.Allforyou.Test3Activity3"/>
+        <activity android:name="edu.sungshin.Allforyou.Test3ActivityResult"/>
+        <activity android:name="edu.sungshin.Allforyou.select1"/>
+        <activity android:name="edu.sungshin.Allforyou.select2"/>
+        <activity android:name="edu.sungshin.Allforyou.select3"/>
+        <activity android:name="edu.sungshin.Allforyou.select4"/>
 
     </application>
 

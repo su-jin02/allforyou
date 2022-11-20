@@ -2,13 +2,17 @@ package edu.sungshin.Allforyou;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -40,7 +44,8 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private DatabaseReference mDatabaseRef;
     EditText name, id, pw, pw2, email, birth;
-    Button pwcheck,btn1;
+    Button btn1;
+    TextView pwmsg , pwcheck;
     RadioGroup radio_group;
     RadioButton radio_button_man, radio_button_woman, radio_button_else;
     Calendar myCalendar = Calendar.getInstance();
@@ -67,6 +72,9 @@ public class SignupActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         pw = findViewById(R.id.pw1);
         pw2 = findViewById(R.id.pw2);
+        pwmsg = findViewById(R.id.pwmsg);
+        pwcheck = findViewById(R.id.pwcheck);
+        btn1 = findViewById(R.id.btn1);
         radio_group = findViewById(R.id.radio_group);
         radio_button_man = findViewById(R.id.radio_button_man);
         radio_button_woman = findViewById(R.id.radio_button_woman);
@@ -84,14 +92,67 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        btn1 = findViewById(R.id.btn1);
-        pwcheck = findViewById(R.id.pwcheck);
 
-        pwcheck.setOnClickListener(v -> {
-            if (pw.getText().toString().equals(pw2.getText().toString())) {
-                pwcheck.setText("일치");
-            } else {
-                Toast.makeText(SignupActivity.this, "비밀번호가 다릅니다.", Toast.LENGTH_LONG).show();
+//        pwcheck.setOnClickListener(v -> {
+//            if (pw.getText().toString().equals(pw2.getText().toString())) {
+//                pwcheck.setText("일치");
+//            } else {
+//                Toast.makeText(SignupActivity.this, "비밀번호가 다릅니다.", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
+        //비번 조건
+        pw.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                String password = pw.getText().toString().trim();
+                if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%^~*#?&]).{8,15}.$", password))
+                {
+                    pwmsg.setTextColor(Color.parseColor("#F11135"));
+                    pwmsg.setText("조건에 맞추어 비밀번호를 설정해주세요");
+                }
+                else{
+                    pwmsg.setTextColor(Color.parseColor("#4CAF50"));
+                    pwmsg.setText("적합한 비밀번호입니다.");
+                }
+
+
+            }
+        });
+
+        //비번 일치 확인
+        pw2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (pw.getText().toString().equals(pw2.getText().toString())) {
+                    pwcheck.setText("일치");
+                    pwcheck.setTextColor(Color.parseColor("#4CAF50"));
+                }
+                else{
+                    pwcheck.setText("불일치");
+                    pwcheck.setTextColor(Color.parseColor("#F11135"));
+                }
+
             }
         });
 
@@ -174,15 +235,6 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setText(sdf.format(myCalendar.getTime()));
     }
 
-    //비밀번호 유효성 검사
-   void check_validation(String password) {
-
-       if(!Pattern.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!%*#?&]).{8,15}.$", password))
-       {
-           Toast.makeText(SignupActivity.this,"숫자, 문자, 특수문자 모두 포함 (8~15자)로 설정해주세요",Toast.LENGTH_SHORT).show();
-       }
-
-    }
 
 }
 

@@ -41,10 +41,10 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="200dp"
-        android:textStyle="bold"
         android:text="Today Date:"
         android:textColor="#4B0082"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
 
     <Button
