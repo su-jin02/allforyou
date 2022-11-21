@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="480dp"
-        android:layout_marginLeft="88dp"
+        android:layout_marginLeft="80dp"
         android:text="우리집 그리기"
         android:textSize="40sp" />
 
@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:layout_marginLeft="160dp"
-        android:text="시작"
+        android:layout_marginLeft="130dp"
+        android:text="start"
         android:textSize="40sp"
         android:background="#DDD3F8"/>
 

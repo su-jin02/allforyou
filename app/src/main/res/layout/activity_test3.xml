@@ -15,7 +15,7 @@
           android:id="@+id/btnTh"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginLeft="5dp"
+
           android:text="얇음"
           android:background="#DDD3F8"/>
 
@@ -70,7 +70,7 @@
        android:id="@+id/btnresult"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginLeft="155dp"
+       android:layout_marginLeft="152dp"
        android:background="#CDBAFF"
        android:text="RESULT"/>
 </LinearLayout>
