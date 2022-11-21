@@ -65,6 +65,16 @@ public class Test3Activity3 extends AppCompatActivity {
             }
         }));
 
+        Button btnresult = findViewById(R.id.btnresult);
+        btnresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Test3Activity3.this,Test3DrawResult.class);
+                startActivity(intent);
+            }
+
+        });
+
         ((Button)findViewById(R.id.btnClear)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

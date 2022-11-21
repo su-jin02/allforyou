@@ -8,19 +8,120 @@
 
 
     <ImageButton
-        android:id="@+id/mypgbackBtn"
+        android:id="@+id/returnbtn"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/exit1"
         android:layout_marginLeft="350dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         />
 
-    <ImageView
+    <TextView
         android:id="@+id/digIv1"
         android:layout_width="wrap_content"
-        android:layout_height="560dp"
-        android:layout_margin="5dp"
-        android:src="@drawable/pic3" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="45dp"
+        android:textSize="20sp"
+        android:text="현재 나의 모습과 감정 상태 알아보기" />
+
+    <RadioGroup
+        android:id="@+id/radio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        >
+        <RadioButton
+            android:id="@+id/btn21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_red"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 빨간색\n 매사에 의욕이 넘치고 모든 일을 해낼 수 있을 것 같은 자신감이 넘치는 상태"/>
+
+        <RadioButton
+            android:id="@+id/btn22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_orange"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 주황색\n 합리적이고 냉정한 사고로 매사에 일을 원활하게 처리하고 자신의 욕망을 잘 컨트롤할 줄 아는 상태 "/>
+
+        <RadioButton
+            android:id="@+id/btn23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_yellow"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 노란색\n 어려움이 있더라도 현명하게 생각하여 긍정적이고 좋은 결과를 가져올 수 있는 상태"/>
+
+        <RadioButton
+            android:id="@+id/btn24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_green"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 초록색\n 무슨 일이든 적당히만 하고자 하고, 도전적이거나 무리한 일은 하고 싶지 않아 기피하는 상태"/>
+
+        <RadioButton
+            android:id="@+id/btn25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_blue"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 파란색 \n 어떤 일에도 의욕이 생기지 않는 무기력한 상태"/>
+
+        <RadioButton
+            android:id="@+id/btn26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_purple"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 보라색\n 아무렇지 않게 넘겼을 일에도 예민하고 걱정이 많아 스트레스를 받고 감정 소모를 하는 상태"/>
+
+        <RadioButton
+            android:id="@+id/btn27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:checked="true"
+            android:background="@drawable/testrb_white"
+            android:textColor="@drawable/test2_radiobutton_text"
+            android:button="@null"
+            android:text=" 흰 색\n 과거의 실패가 발목을 잡아 또 실패할 거라는 부정적인 생각이 많은 상태"/>
+    </RadioGroup>
 
 </LinearLayout>
