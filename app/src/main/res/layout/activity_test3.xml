@@ -56,7 +56,7 @@
    <LinearLayout
        android:id="@+id/paintLayout"
        android:layout_width="match_parent"
-       android:layout_height="600dp"
+       android:layout_height="550dp"
        android:orientation="vertical">
    </LinearLayout>
 
@@ -70,7 +70,7 @@
        android:id="@+id/btnresult"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginLeft="5dp"
+       android:layout_marginLeft="155dp"
        android:background="#CDBAFF"
        android:text="RESULT"/>
 </LinearLayout>

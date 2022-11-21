@@ -61,15 +61,9 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="20dp"/>
 
-        <EditText
-            android:id="@+id/op1"
-            android:hint="색 선택"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "18sp"/>
 
         <Button
             android:id="@+id/option1text"
@@ -96,15 +90,8 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginRight="30dp"/>
-
-        <EditText
-            android:id="@+id/op2"
-            android:hint="색 선택"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "18sp"/>
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="20dp"/>
 
         <Button
             android:id="@+id/option2text"
@@ -131,15 +118,10 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="20dp"/>
 
-        <EditText
-            android:id="@+id/op3"
-            android:hint="색 선택"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "18sp"/>
+
 
         <Button
             android:id="@+id/option3text"
@@ -166,15 +148,9 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="20dp"/>
 
-        <EditText
-            android:id="@+id/op4"
-            android:hint="색 선택"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize = "18sp" />
 
         <Button
             android:id="@+id/option4text"
