@@ -50,6 +50,15 @@
         android:layout_marginBottom="5dp"
         android:textSize="15sp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="이메일은 이후 재설정이 불가능합니다."
+        android:layout_marginBottom="5dp"
+        android:textSize="10sp"/>
+
+
     <EditText
         android:id="@+id/email"
         android:layout_width="320dp"
@@ -204,7 +213,7 @@
         android:textSize="15sp"/>
 
 
-    <EditText
+    <Button
         android:id="@+id/birth"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
@@ -214,8 +223,8 @@
         android:clickable="true"
         android:elevation="5dp"
         android:focusable="true"
-        android:gravity="left"
-        android:hint="생일입력"
+        android:gravity="center"
+        android:text="생일입력"
         android:padding="10dp"
         android:textSize="15sp"
         app:backgroundTint="#FFFFFF" />

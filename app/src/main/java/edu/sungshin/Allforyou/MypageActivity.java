@@ -40,12 +40,8 @@ public class MypageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String userbirth = dataSnapshot.getValue(String.class);
-
-//                Log.v("test", String.valueOf(group));
                 mybirth.setText(userbirth);
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
@@ -56,13 +52,8 @@ public class MypageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String username = dataSnapshot.getValue(String.class);
-
-//                Log.v("test", String.valueOf(group));
                 myname.setText(username);
-
             }
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
@@ -73,13 +64,8 @@ public class MypageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String usersex = dataSnapshot.getValue(String.class);
-
-//                Log.v("test", String.valueOf(group));
                 mygender.setText(usersex);
-
             }
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력

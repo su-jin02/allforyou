@@ -47,6 +47,11 @@ public class LoginActivity extends AppCompatActivity {
                 String stremail = etext1.getText().toString().trim();
                 String strpw = etext2.getText().toString().trim();
 
+                if ((stremail.length() == 0) && (strpw.length() == 0)) {
+                    Toast.makeText(LoginActivity.this, "정보를 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 mFirebaseAuth.signInWithEmailAndPassword(stremail, strpw).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -58,12 +63,6 @@ public class LoginActivity extends AppCompatActivity {
 
                             Toast.makeText(LoginActivity.this, "로그인에 성공했습니다", Toast.LENGTH_SHORT).show();
 
-                        }
-                        else if(stremail.length() == 0){
-                            Toast.makeText(LoginActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
-                        }
-                        else if(strpw.length() == 0){
-                            Toast.makeText(LoginActivity.this, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Toast.makeText(LoginActivity.this, "이메일/비밀번호를 다시 확인해주세요", Toast.LENGTH_SHORT).show();
