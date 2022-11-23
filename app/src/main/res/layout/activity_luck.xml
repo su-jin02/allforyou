@@ -66,7 +66,7 @@
         android:background="#DDD3F8"/>
 
     <TextView
-        android:id="@+id/todaylucktext"
+        android:id="@+id/todaylucktext1"
         android:text = "오늘의 운세 글귀"
         android:scrollbars="vertical"
         android:scrollbarFadeDuration="0"
@@ -78,26 +78,11 @@
         android:textSize="16dp"
         android:textColor="#000000"
         android:layout_width="match_parent"
-        android:layout_height="170dp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2.5dp"
-        android:background="#DDD3F8"/>
+        android:layout_height="60dp"/>
 
     <TextView
-        android:id="@+id/animalluck"
-        android:text = "띠별 운세"
-        android:layout_marginTop="10dp"
-        android:textSize = "15sp"
-        android:gravity = "center"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:background="#DDD3F8"/>
-
-    <TextView
-        android:id="@+id/animallucktext"
-        android:text = "띠별 운세 글귀"
+        android:id="@+id/todaylucktext2"
+        android:text = "오늘의 운세 글귀"
         android:scrollbars="vertical"
         android:scrollbarFadeDuration="0"
         android:scrollbarAlwaysDrawVerticalTrack="True"
@@ -108,43 +93,13 @@
         android:textSize="16dp"
         android:textColor="#000000"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2.5dp"
-        android:background="#DDD3F8"
-        />
-
-    <TextView
-        android:id="@+id/starluck"
-        android:text = "별자리 운세"
-        android:layout_marginTop="10dp"
-        android:textSize = "15sp"
-        android:gravity = "center"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:background="#DDD3F8"/>
-
-    <TextView
-        android:id="@+id/starlucktext"
-        android:text = "별자리 운세 글귀"
-        android:scrollbars="vertical"
-        android:scrollbarFadeDuration="0"
-        android:scrollbarAlwaysDrawVerticalTrack="True"
-        android:scrollbarThumbVertical="@color/purple_1000"
-        android:scrollbarTrackVertical="@color/luckgray"
-        android:scrollbarSize="2dp"
-        android:scrollbarStyle="outsideInset"
-        android:textSize="16dp"
-        android:textColor="#000000"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="200dp"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2.5dp"
         android:background="#DDD3F8"/>
+
 
 
 </LinearLayout>
