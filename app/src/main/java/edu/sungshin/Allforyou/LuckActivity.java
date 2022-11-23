@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 public class LuckActivity extends Fragment {
     long mNow;
@@ -47,52 +48,36 @@ public class LuckActivity extends Fragment {
         calendarTV = (TextView) v.findViewById(R.id.calendarTV);
         todayluckTV = (TextView) v.findViewById(R.id.todaylucktext1);
         todayluckTV2 = (TextView) v.findViewById(R.id.todaylucktext2);
-        //animalluckTV = (TextView) v.findViewById(R.id.animallucktext);
-        //starluckTV = (TextView) v.findViewById(R.id.starlucktext);
+        animalluckTV = (TextView) v.findViewById(R.id.animallucktext);
+        starluckTV = (TextView) v.findViewById(R.id.starlucktext);
 
         calendarTV.setText(getTime());
 
+        String[] randomText1 = getResources().getStringArray(R.array.todayluckText);
+        Random random1 = new Random();
+        int n1 = random1.nextInt(randomText1.length-1);
         todayluckTV.setMovementMethod(new ScrollingMovementMethod());
-        DocumentReference docRef1 = db.collection("todayluck").document("todayluck");
-        docRef1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        todayluckstr = String.valueOf(document.getData());
-                        todayluckTV.setText(todayluckstr);
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
+        todayluckTV.setText(randomText1[n1]);
         todayluckTV.setScrollY(0);
 
         todayluckTV2.setMovementMethod(new ScrollingMovementMethod());
-        DocumentReference docRef2 = db.collection("todayluck2").document("todayluck2");
-        docRef1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        todayluckstr2 = String.valueOf(document.getData());
-                        todayluckTV2.setText(todayluckstr2);
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
+        String[] randomText2 = getResources().getStringArray(R.array.todayluckDetail);
+        todayluckTV2.setText(randomText2[n1]);
         todayluckTV2.setScrollY(0);
+
+        String[] randomText3 = getResources().getStringArray(R.array.animalluckText);
+        Random random3 = new Random();
+        int n3 = random3.nextInt(randomText3.length-1);
+        animalluckTV.setMovementMethod(new ScrollingMovementMethod());
+        animalluckTV.setText(randomText3[n3]);
+        animalluckTV.setScrollY(0);
+
+        String[] randomText4 = getResources().getStringArray(R.array.starluckText);
+        Random random4 = new Random();
+        int n4 = random4.nextInt(randomText4.length-1);
+        starluckTV.setMovementMethod(new ScrollingMovementMethod());
+        starluckTV.setText(randomText4[n4]);
+        starluckTV.setScrollY(0);
 
         return v;
     }
