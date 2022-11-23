@@ -25,11 +25,11 @@ public class select3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select3);
 
-        final TextView t2 = (TextView) findViewById(R.id.t3);
-        final RadioGroup radio2 = (RadioGroup) findViewById(R.id.radio3);
-        Button save3 = (Button) findViewById(R.id.save3);
+        final TextView t3 = (TextView) findViewById(R.id.t3);
+        final RadioGroup radio3 = (RadioGroup) findViewById(R.id.radio3);
+        Button save2 = (Button) findViewById(R.id.save3);
 
-        save3.setOnClickListener(new View.OnClickListener() {
+        save2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -44,3 +44,6 @@ public class select3 extends AppCompatActivity {
 
     }
 }
+
+
+

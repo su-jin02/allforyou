@@ -26,7 +26,7 @@ public class select4 extends AppCompatActivity {
         setContentView(R.layout.select4);
 
         final TextView t4 = (TextView) findViewById(R.id.t4);
-        final RadioGroup radio4= (RadioGroup) findViewById(R.id.radio4);
+        final RadioGroup radio4 = (RadioGroup) findViewById(R.id.radio4);
         Button save4 = (Button) findViewById(R.id.save4);
 
         save4.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +41,8 @@ public class select4 extends AppCompatActivity {
 
 
         });
+
     }
 }
+
+
