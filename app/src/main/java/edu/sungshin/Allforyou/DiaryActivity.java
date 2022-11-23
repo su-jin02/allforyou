@@ -116,13 +116,13 @@ public class DiaryActivity extends Fragment {
                     sqlDB.execSQL("UPDATE eduDiary SET content = '" + edt.getText().toString() +
                             "' WHERE diaryDate = '" + fileName + "';");
                     sqlDB.close();
-                    Toast.makeText(getActivity().getApplicationContext(), fileName + " 이 수정됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "내용이 수정됨", Toast.LENGTH_SHORT).show();
 
                 } else {
                     sqlDB = myHelper.getWritableDatabase();
                     sqlDB.execSQL("INSERT INTO eduDiary (diaryDate, content) VALUES ('" + fileName + "' , '" + edt.getText().toString() + "');");
                     sqlDB.close();
-                    Toast.makeText(getActivity().getApplicationContext(), fileName + " 이 저장됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "내용이 저장됨", Toast.LENGTH_SHORT).show();
                     btn.setText("수정하기");
                 }
 
