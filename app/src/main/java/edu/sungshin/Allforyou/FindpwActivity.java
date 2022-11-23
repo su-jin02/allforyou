@@ -1,11 +1,10 @@
 package edu.sungshin.Allforyou;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,56 +13,50 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
 
 public class FindpwActivity extends AppCompatActivity {
 
-    //private FirebaseAuth mFirebaseAuth;
-    //private DatabaseReference mDatabaseRef;
-    private FirebaseAuth auth;
-    DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("User");;
+    private FirebaseAuth mFirebaseAuth;
+    private DatabaseReference mDatabaseRef;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_findpw);
 
-        EditText email = (EditText) findViewById(R.id.email);
-        EditText pw = (EditText) findViewById(R.id.pw);
-        EditText name = (EditText) findViewById(R.id.name);
-        Button btn = (Button) findViewById(R.id.btn);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
 
-        auth= FirebaseAuth.getInstance();
+        Button btn = (Button) findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                mDatabaseRef.child(auth.getCurrentUser().getUid()).child("pw").addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String userbirth = dataSnapshot.getValue(String.class);
-                        pw.setText(userbirth);
-                    }
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-                    }
-                });
-
+                send();
             }
         });
 
 
+    }
+    private void send() {
+        String stremail = ((EditText) findViewById(R.id.email)).getText().toString().trim();
 
+        if(stremail.length() > 0){
+            mFirebaseAuth.sendPasswordResetEmail(stremail)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(FindpwActivity.this, "이메일을 보냈습니다", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }else{
+            Toast.makeText(FindpwActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
+        }
     }
 }
