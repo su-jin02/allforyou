@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Button button = (Button)findViewById(R.id.btn1);
         TextView register = (TextView)findViewById(R.id.signin);
+        TextView findpw = (TextView)findViewById(R.id.findpw);
 
         EditText etext1 = (EditText) findViewById(R.id.etext1);
         EditText etext2 = (EditText) findViewById(R.id.etext2);
@@ -78,6 +79,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findpw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, FindpwActivity.class);
                 startActivity(intent);
             }
         });

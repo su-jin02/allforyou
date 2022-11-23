@@ -1,7 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="28dp"
+        android:text="비밀번호 찾기"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/nameT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="닉네임*"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
+        android:hint="닉네임을 입력하세요"
+        android:textSize="15sp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/emailT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="이메일 주소*"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
+        android:hint="ID@example.com"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/pwT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="비밀번호"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/pw"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:elevation="5dp"
+        android:hint="잃어버린 비밀번호가 표시되는 부분입니다"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="비밀번호 확인"
+        app:backgroundTint="#DDD3F8"
+        app:strokeColor="#000000" />
 
 </LinearLayout>

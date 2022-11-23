@@ -28,6 +28,7 @@
 
         </activity>
         <activity android:name="edu.sungshin.Allforyou.SignupActivity" />
+        <activity android:name="edu.sungshin.Allforyou.FindpwActivity" />
         <activity android:name="edu.sungshin.Allforyou.MainActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
         <activity android:name="edu.sungshin.Allforyou.Test3Activity3"/>

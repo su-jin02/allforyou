@@ -46,7 +46,9 @@
         android:layout_height="wrap_content"
         android:text="비밀번호 찾기  |"
         android:layout_marginTop="390dp"
-        android:id="@+id/text3"
+        android:id="@+id/findpw"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_marginStart="100dp"/>
 
     <TextView
