@@ -184,6 +184,16 @@ public class SignupActivity extends AppCompatActivity {
                     Toast.makeText(SignupActivity.this, "정보를 입력해주세요", Toast.LENGTH_LONG).show();
                     return;
                 }
+
+                //이메일 형식
+                Pattern p = android.util.Patterns.EMAIL_ADDRESS;
+                Matcher m = p.matcher(stremail);
+                if (!m.matches()){
+                    Toast.makeText(SignupActivity.this, "Email형식으로 입력하세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
                 if ((String) pwmsg.getText() != "적합한 비밀번호입니다.") {
                     Toast.makeText(SignupActivity.this, "비밀번호 조건이 맞지 않습니다", Toast.LENGTH_SHORT).show();
                     return;

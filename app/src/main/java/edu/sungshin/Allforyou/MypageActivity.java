@@ -1,15 +1,22 @@
 package edu.sungshin.Allforyou;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -33,8 +40,53 @@ public class MypageActivity extends AppCompatActivity {
         TextView myname = (TextView) findViewById(R.id.name);
         TextView mybirth = (TextView) findViewById(R.id.birth);
         TextView mygender = (TextView) findViewById(R.id.gender);
+        Button logout = (Button) findViewById(R.id.logout);
+        Button delete = (Button) findViewById(R.id.delete);
 
         auth= FirebaseAuth.getInstance();
+
+
+        //로그아웃
+       logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                Toast.makeText(MypageActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_LONG).show();
+                finish();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            }
+        });
+
+        //회원탈퇴
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alert_confirm = new AlertDialog.Builder(MypageActivity.this);
+                alert_confirm.setMessage("정말 계정을 삭제 할까요?").setCancelable(false).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseUser user = auth.getCurrentUser();
+                                user.delete()
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                Toast.makeText(MypageActivity.this, "계정이 삭제 되었습니다.", Toast.LENGTH_LONG).show();
+                                                finish();
+                                                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                            }
+                                        });
+                            }
+                        }
+                );
+                alert_confirm.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(MypageActivity.this, "취소", Toast.LENGTH_LONG).show();
+                    }
+                });
+                alert_confirm.show();
+            }
+        });
 
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("birth").addValueEventListener(new ValueEventListener() {
             @Override
