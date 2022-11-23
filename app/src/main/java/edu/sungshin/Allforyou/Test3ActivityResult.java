@@ -15,13 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
             super.onCreate(savedInstanceState);
             setContentView(R.layout.test3result);
 
-            ImageButton btnReturn = (ImageButton) findViewById(R.id.returnbtn);
 
-            btnReturn.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    finish();
-                }
-            });
 
         }
 

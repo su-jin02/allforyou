@@ -11,16 +11,6 @@
     android:orientation="vertical"
     >
 
-
-    <ImageButton
-        android:id="@+id/returnbtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/exit1"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="5dp"
-        />
-
     <TextView
         android:id="@+id/digIv1"
         android:layout_width="wrap_content"
@@ -136,6 +126,22 @@
             android:button="@null"
             android:text=" 흰 색\n 부드럽고 예민하며 감성적인 몽상가 스타일을 가진 사람, 감정 표현이 풍부하지만 감정 기복이 심해 사소한 일에도 쉽게 흥분하는 편"/>
     </RadioGroup>
+
+    <Button
+        android:id="@+id/save1"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text = "저장"
+        android:textColor="#000000"
+        android:backgroundTint="#DDD3F8"/>
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="#000000" />
 
 </LinearLayout>
 </ScrollView>

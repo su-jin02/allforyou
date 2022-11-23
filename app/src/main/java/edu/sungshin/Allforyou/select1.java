@@ -1,19 +1,27 @@
 package edu.sungshin.Allforyou;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
-
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+
 
 
 
 public class select1 extends AppCompatActivity {
+    RadioGroup radio1;
+    Button save1;
+    TextView t1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +29,24 @@ public class select1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select1);
 
-        ImageButton btnReturn = (ImageButton) findViewById(R.id.returnbtn);
+        final TextView t1=(TextView)findViewById(R.id.t1);
+        final RadioGroup radio1 = (RadioGroup)findViewById(R.id.radio1);
+        Button save1=(Button)findViewById(R.id.save1);
 
-        btnReturn.setOnClickListener(new View.OnClickListener() {
+        save1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
             public void onClick(View v) {
-                finish();
+                int id = radio1.getCheckedRadioButtonId();
+                RadioButton rb = (RadioButton) findViewById(id);
+                t1.setText(rb.getText().toString());
+
             }
+
+
         });
-
     }
-
 }
+
 
 
