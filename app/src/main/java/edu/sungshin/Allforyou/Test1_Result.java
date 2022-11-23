@@ -12,8 +12,10 @@ import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
+import javax.xml.transform.Result;
+
 public class Test1_Result extends AppCompatActivity {
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,button;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16;
     ImageView img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16;
 
     @Override
@@ -28,7 +30,6 @@ public class Test1_Result extends AppCompatActivity {
         btn6=(Button) findViewById(R.id.btn6); btn14=(Button)findViewById(R.id.btn14);  img6=(ImageView)findViewById(R.id.img6);  img14=(ImageView)findViewById(R.id.img14);
         btn7=(Button) findViewById(R.id.btn7); btn15=(Button)findViewById(R.id.btn15);  img7=(ImageView)findViewById(R.id.img7);  img15=(ImageView)findViewById(R.id.img15);
         btn8=(Button) findViewById(R.id.btn8); btn16=(Button) findViewById(R.id.btn16); img8=(ImageView) findViewById(R.id.img8); img16=(ImageView) findViewById(R.id.img16);
-        button=(Button)findViewById(R.id.button);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +49,7 @@ public class Test1_Result extends AppCompatActivity {
                 img14.setVisibility(View.INVISIBLE);
                 img15.setVisibility(View.INVISIBLE);
                 img16.setVisibility(View.INVISIBLE);
+
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -365,23 +367,6 @@ public class Test1_Result extends AppCompatActivity {
                 img16.setVisibility(View.VISIBLE);
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ByteArrayOutputStream stream=new ByteArrayOutputStream();
-                Bitmap bitmap=((BitmapDrawable)img1.getDrawable()).getBitmap();
-                float scale=(float) (1020/(float)bitmap.getWidth());
-                int img_w=(int)(bitmap.getWidth()*scale);
-                int img_h=(int)(bitmap.getHeight()*scale);
-                Bitmap resize=Bitmap.createScaledBitmap(bitmap,img_w,img_h,true);
-                resize.compress(Bitmap.CompressFormat.PNG,100,stream);
-                byte[]array=stream.toByteArray();
 
-                Intent intent=new Intent(getApplicationContext(),Test1_result_show.class);
-                intent.putExtra("image",array);
-
-                startActivity(intent);
-            }
-        });
     }
 }

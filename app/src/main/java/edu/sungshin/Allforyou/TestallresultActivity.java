@@ -1,6 +1,8 @@
 package edu.sungshin.Allforyou;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
+
 
 public class TestallresultActivity extends Fragment {
     Button btn1,btn2,btn3;
@@ -18,10 +21,13 @@ public class TestallresultActivity extends Fragment {
         btn2=(Button) v.findViewById(R.id.btn2);
         btn3=(Button) v.findViewById(R.id.btn3);
 
+
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),Test1_result_show.class);
+                Intent intent=new Intent(getActivity(),Test1_Result.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
             }
         });

@@ -27,10 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#DDD3F8"
-        android:drawableTop="@drawable/testimage"
+        android:drawableTop="@drawable/mojitoop"
         android:text="테스트하러 가기"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn2"

@@ -22,7 +22,7 @@ import org.checkerframework.checker.units.qual.C;
 
 
 public class Test1Activity extends Fragment {
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,button;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24;
     Integer cnt1=0;
     Integer cnt2=0;
     Integer cnt3=0;
@@ -44,7 +44,7 @@ public class Test1Activity extends Fragment {
         btn10=(Button) v.findViewById(R.id.btn10); btn22=(Button)v.findViewById(R.id.btn22);
         btn11=(Button) v.findViewById(R.id.btn11); btn23=(Button)v.findViewById(R.id.btn23);
         btn12=(Button) v.findViewById(R.id.btn12); btn24=(Button) v.findViewById(R.id.btn24);
-        txt1=(TextView)v.findViewById(R.id.text1); button=(Button)v.findViewById(R.id.button);
+        txt1=(TextView)v.findViewById(R.id.text1);
         txt2=(TextView)v.findViewById(R.id.text2);
         txt3=(TextView)v.findViewById(R.id.text3);
         txt4=(TextView)v.findViewById(R.id.text4);
@@ -282,14 +282,6 @@ public class Test1Activity extends Fragment {
                 return false;
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),Test1_Result.class);
-                startActivity(intent);
-            }
-        });
-
 
 
 

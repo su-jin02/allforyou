@@ -8,16 +8,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/text"
         android:text="Test1 결과"
         android:layout_gravity="center"
         android:textSize="30dp"
         android:layout_marginTop="20dp"
         android:textColor="#000000"/>
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/img"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:textColor="#000000"/>
+
+
 
 
 
