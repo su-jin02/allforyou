@@ -29,10 +29,12 @@ public class LuckActivity extends Fragment {
 
     TextView calendarTV;
     TextView todayluckTV;
+    TextView todayluckTV2;
     TextView animalluckTV;
     TextView starluckTV;
 
     String todayluckstr;
+    String todayluckstr2;
     String animalluckstr;
     String starluckstr;
 
@@ -43,9 +45,10 @@ public class LuckActivity extends Fragment {
         View v=inflater.inflate(R.layout.activity_luck, container, false);
 
         calendarTV = (TextView) v.findViewById(R.id.calendarTV);
-        todayluckTV = (TextView) v.findViewById(R.id.todaylucktext);
-        animalluckTV = (TextView) v.findViewById(R.id.animallucktext);
-        starluckTV = (TextView) v.findViewById(R.id.starlucktext);
+        todayluckTV = (TextView) v.findViewById(R.id.todaylucktext1);
+        todayluckTV2 = (TextView) v.findViewById(R.id.todaylucktext2);
+        //animalluckTV = (TextView) v.findViewById(R.id.animallucktext);
+        //starluckTV = (TextView) v.findViewById(R.id.starlucktext);
 
         calendarTV.setText(getTime());
 
@@ -70,17 +73,17 @@ public class LuckActivity extends Fragment {
         });
         todayluckTV.setScrollY(0);
 
-        animalluckTV.setMovementMethod(new ScrollingMovementMethod());
-        DocumentReference docRef2 = db.collection("animalluck").document("animalluck");
-        docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        todayluckTV2.setMovementMethod(new ScrollingMovementMethod());
+        DocumentReference docRef2 = db.collection("todayluck2").document("todayluck2");
+        docRef1.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        animalluckstr = String.valueOf(document.getData());
-                        animalluckTV.setText(animalluckstr);
+                        todayluckstr2 = String.valueOf(document.getData());
+                        todayluckTV2.setText(todayluckstr2);
                     } else {
                         Log.d(TAG, "No such document");
                     }
@@ -89,28 +92,7 @@ public class LuckActivity extends Fragment {
                 }
             }
         });
-        animalluckTV.setScrollY(0);
-
-        starluckTV.setMovementMethod(new ScrollingMovementMethod());
-        DocumentReference docRef3 = db.collection("starluck").document("starluck");
-        docRef3.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        starluckstr = String.valueOf(document.getData());
-                        starluckTV.setText(starluckstr);
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
-        starluckTV.setScrollY(0);
+        todayluckTV2.setScrollY(0);
 
         return v;
     }
