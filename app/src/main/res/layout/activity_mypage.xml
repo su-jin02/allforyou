@@ -9,60 +9,57 @@
     tools:context=".MypageActivity"
     >
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="225dp"
+        android:background="#CDBAFF"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="225dp"
-            android:background="#CDBAFF"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:text="My Page"
+                android:textSize="20dp"
+                android:layout_marginRight="255dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="My Page"
-                    android:textSize="20dp"
-                    android:layout_marginRight="255dp"
-                    android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/mypgbackBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/layer_list2"
+                />
 
-                <ImageButton
-                    android:id="@+id/mypgbackBtn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/layer_list2"
-                    />
+        </LinearLayout>
 
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="140dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:src= "@drawable/layer_list"
+                android:layout_marginLeft="9dp"/>
 
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="match_parent"
-                    android:src= "@drawable/layer_list"
-                    android:layout_marginLeft="9dp"/>
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="이름 : \n생일 : \n성별 : "
-                    android:textSize="20dp"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="25dp"
+                android:text="이름 : \n생일 : \n성별 : "
+                android:textSize="20dp"/>
 
 
                 <LinearLayout
@@ -99,18 +96,29 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:text="로그아웃"
+                android:background="#DDD3F8"/>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:text="회원탈퇴"
+                android:background="#DDD3F8"/>
+
         </LinearLayout>
 
-    </LinearLayout>
-
-
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
-
 </LinearLayout>
+
