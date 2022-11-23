@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="18sp"
+        android:textColor="#000000"
         android:text="앞으로의 미래와 살아가는 데 도움이 되는 \n팁 알아보기" />
 
     <TextView

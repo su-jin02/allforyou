@@ -13,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
@@ -31,6 +32,8 @@ public class Test3Activity3 extends AppCompatActivity {
         setContentView(R.layout.activity_test3);
         setTitle("우리집 그리기");
         myView = new MyPaintView(this);
+
+
 
         ((LinearLayout) findViewById(R.id.paintLayout)).addView(myView);
         ((RadioGroup)findViewById(R.id.radioGroup)).setOnCheckedChangeListener(
@@ -53,12 +56,15 @@ public class Test3Activity3 extends AppCompatActivity {
 
 
         Button btnresult = (Button) findViewById(R.id.btnresult) ;
+        ImageButton btnReturn = (ImageButton) findViewById(R.id.returnbtn);
         btnresult.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Test3ActivityResult.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(getApplicationContext(),TestResult3.class);
+                startActivity(intent1);
             }
+
+
         });
 
 
@@ -138,7 +144,7 @@ public class Test3Activity3 extends AppCompatActivity {
             return true;
         }
 
-    }
+        }
 
     public static class Test3Activity extends Fragment {
         private int count=0;

@@ -9,16 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_weight="1">
-
-    <ImageButton
-        android:id="@+id/returnbtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/exit1"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="20dp"
-        />
+    android:layout_weight="1"
+    android:layout_marginBottom="50dp">
 
     <TextView
         android:background="#DDD3F8"
@@ -58,6 +50,15 @@
             android:id="@+id/r14"
             android:text="지붕을 정교하게 그린 경우"/>
     </RadioGroup>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
 
     <TextView
         android:background="#DDD3F8"
@@ -85,6 +86,14 @@
             android:layout_height="wrap_content"
             android:text="굴뚝에 벽돌무늬를 그린 경우"/>
     </RadioGroup>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
 
     <TextView
         android:background="#DDD3F8"
@@ -134,6 +143,15 @@
 
     </RadioGroup>
     <TextView
+        android:id="@+id/text3"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
+    <TextView
         android:background="#DDD3F8"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
@@ -142,7 +160,6 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         />
-
     <RadioGroup
         android:id="@+id/radio4"
         android:layout_width="match_parent"
@@ -169,6 +186,14 @@
             android:layout_height="wrap_content"
             android:text="높은 위치에 창문이 위치한 경우"/>
     </RadioGroup>
+    <TextView
+        android:id="@+id/text4"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
 
     <TextView
         android:background="#DDD3F8"
@@ -199,9 +224,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/r53"
             android:text="나무 사이에 있는 모습"/>
-
-
     </RadioGroup>
+    <TextView
+        android:id="@+id/text5"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
 
 </LinearLayout>
 </ScrollView>

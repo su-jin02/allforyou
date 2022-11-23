@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="17sp"
+        android:textColor="#000000"
         android:text="이제까지의 장애 요인이 무엇인지 알아보기" />
 
     <TextView

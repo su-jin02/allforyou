@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="20sp"
+        android:textColor="#000000"
         android:text="나조차 모르고 있던 잠재적인 성격" />
 
     <TextView
