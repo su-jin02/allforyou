@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="63dp"
         android:layout_marginBottom="25dp"
+        android:layout_marginStart="152dp"
         android:layout_marginLeft="144dp"
         android:text="심리 테스트 1"
         android:textColor="#000000"
@@ -17,17 +18,17 @@
 
     <TextView
         android:id="@+id/EQtestText"
-        android:layout_width="96dp"
-        android:layout_height="38dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="152dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="25dp"
-        android:layout_marginLeft="152dp"
-        android:text="  EQ Test"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:background="@drawable/eatesttext"
         android:elevation="5dp"
         android:padding="5dp"
-        android:background="@drawable/eatesttext" />
+        android:text=" 나의 캐릭터"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="333dp"
@@ -68,12 +69,13 @@
 
                 <TextView
                     android:id="@+id/test1averageText1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="290dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="0dp"
+                    android:layout_marginStart="-20dp"
                     android:layout_marginLeft="100dp"
-                    android:text="48"
+                    android:text=""
                     android:textColor="#000000"
                     android:textSize="40dp"
                     android:textStyle="normal"
@@ -86,7 +88,6 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="0dp"
                     android:layout_marginLeft="10dp"
-                    android:text="(평균 40)"
                     android:textColor="#827B7B"
                     android:textSize="15dp"
                     android:textStyle="normal"
@@ -95,31 +96,72 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/test1resultText3"
-                android:layout_width="wrap_content"
+                android:id="@+id/test1resultText4"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="0dp"
-                android:layout_marginLeft="83dp"
-                android:text="공감/감성 지수"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
                 android:textColor="#000000"
-                android:textSize="20dp"
+                android:textSize="26dp"
+                android:text="당신은 청렴 결백한 논리주의자!\n실제 사실에 대하여 정확하고 체계적으로 기억하며 일 처리 하는데 있어서 신중하고\n책임감이 있다!"
+                android:textStyle="normal"
+                android:elevation="5dp"/>
+            <TextView
+                android:id="@+id/testresultText4"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-260dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:textColor="#000000"
+                android:textSize="26dp"
+                android:text="당신은 만능 재주꾼, 장인!\n과묵하며 절제된 호기심으로 인생을 관찰하고, 상황을 파악하는 민감성과 도구를 다루는 뛰어난 능력이 있다!"
+                android:textStyle="normal"
+                android:elevation="5dp"/>
+            <TextView
+                android:id="@+id/test3resultText4"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-300dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:textColor="#000000"
+                android:textSize="26dp"
+                android:text="당신은 엄격한 관리자, 경영자\n현실적, 구체적,사실적이며 어떠한 활동을 조직화하고 주도해 나가는 지도력이 있다!"
                 android:textStyle="normal"
                 android:elevation="5dp"/>
 
             <TextView
-                android:id="@+id/test1resultText4"
+                android:id="@+id/tes54resultText4"
                 android:layout_width="240dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="0dp"
+                android:layout_height="260dp"
                 android:layout_marginLeft="30dp"
-                android:text="* 공감/감성 지수에 대한 세부 설명"
-                android:textColor="#827B7B"
-                android:textSize="16dp"
-                android:textStyle="normal"
-                android:elevation="5dp"/>
+                android:layout_marginTop="-223dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="invisible"
+                android:elevation="5dp"
+                android:text="당신은 뜨거운 논쟁을 즐기는 변론가,발명가!특유의 능글거리면서 경쾌한 성격과 문제의 본질을 파악하고 논리적으로 판단하려는 기질이 있다!"
+                android:textColor="#000000"
+                android:textSize="26dp"
+                android:textStyle="normal" />
 
+            <TextView
+                android:id="@+id/test6resultText4"
+                android:layout_width="240dp"
+                android:layout_height="289dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="-273dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="invisible"
+                android:elevation="5dp"
+                android:text="당신은 재기발랄한 활동가, 스파크형! 정열적이고 활기가 넘치며 상상력이 풍부하다. 온정적이고 창의적이며 항상 새로운 가능성을 찾고 시도하는 특징이 있다!"
+                android:textColor="#000000"
+                android:textSize="26dp"
+                android:textStyle="normal" />
         </LinearLayout>
 
     </LinearLayout>

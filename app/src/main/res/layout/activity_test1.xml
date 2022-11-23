@@ -353,6 +353,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
@@ -363,25 +364,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:textSize="21dp"
                 android:textColor="#000000"
                 android:id="@+id/text2"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:textSize="21dp"
                 android:textColor="#000000"
                 android:id="@+id/text1"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:textSize="21dp"
                 android:textColor="#000000"
                 android:id="@+id/text3"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:textSize="21dp"
                 android:textColor="#000000"
                 android:id="@+id/text4"/>
             <TextView
@@ -390,6 +391,14 @@
                 android:text="입니다."
                 android:textColor="#000000"
                 android:textSize="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결과 보러 가기"
+                android:layout_marginStart="100dp"
+                android:backgroundTint="#ddd3f8"
+                android:textColor="#000000"
+                android:id="@+id/button"/>
         </LinearLayout>
     </LinearLayout>
 

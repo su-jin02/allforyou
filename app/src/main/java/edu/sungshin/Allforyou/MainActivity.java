@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).commit();
         }
         else if(index == 3){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity3.Test3Activity()).commit();
         }
     }
 

@@ -8,16 +8,17 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
+import androidx.fragment.app.Fragment;
 
 public class Test3Activity3 extends AppCompatActivity {
     private MyPaintView myView;
@@ -139,4 +140,16 @@ public class Test3Activity3 extends AppCompatActivity {
 
     }
 
+    public static class Test3Activity extends Fragment {
+        private int count=0;
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+            return inflater.inflate(R.layout.activity_test3, container, false);
+        }
+
+
+    }
 }

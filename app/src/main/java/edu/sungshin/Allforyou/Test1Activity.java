@@ -22,12 +22,12 @@ import org.checkerframework.checker.units.qual.C;
 
 
 public class Test1Activity extends Fragment {
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24,button;
     Integer cnt1=0;
     Integer cnt2=0;
     Integer cnt3=0;
     Integer cnt4=0;
-    TextView txt1,txt2,txt3,txt4;
+    TextView txt1,txt2,txt3,txt4,txt5;
     String text;
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class Test1Activity extends Fragment {
         btn10=(Button) v.findViewById(R.id.btn10); btn22=(Button)v.findViewById(R.id.btn22);
         btn11=(Button) v.findViewById(R.id.btn11); btn23=(Button)v.findViewById(R.id.btn23);
         btn12=(Button) v.findViewById(R.id.btn12); btn24=(Button) v.findViewById(R.id.btn24);
-        txt1=(TextView)v.findViewById(R.id.text1);
+        txt1=(TextView)v.findViewById(R.id.text1); button=(Button)v.findViewById(R.id.button);
         txt2=(TextView)v.findViewById(R.id.text2);
         txt3=(TextView)v.findViewById(R.id.text3);
         txt4=(TextView)v.findViewById(R.id.text4);
@@ -53,30 +53,27 @@ public class Test1Activity extends Fragment {
         btn1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
                     btn1.setBackgroundColor(Color.rgb(152,251,152));
                     btn2.setBackgroundColor(Color.TRANSPARENT);
-                }
+
                 return false;
             }
         });
         btn2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
                     btn2.setBackgroundColor(Color.rgb(152,251,152));
                     btn1.setBackgroundColor(Color.TRANSPARENT);
-                }
+
                 return false;
             }
         });
         btn3.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
                     btn3.setBackgroundColor(Color.rgb(152, 251, 152));
                     btn4.setBackgroundColor(Color.TRANSPARENT);
-                }
+
                 return false;
             }
         });
@@ -111,9 +108,11 @@ public class Test1Activity extends Fragment {
         btn7.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn7.setBackgroundColor(Color.rgb(152,251,152));
-                btn8.setBackgroundColor(Color.TRANSPARENT);
-                cnt1++;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn7.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn8.setBackgroundColor(Color.TRANSPARENT);
+                    cnt1++;
+                }
                 button1();
                 return false;
             }
@@ -121,9 +120,11 @@ public class Test1Activity extends Fragment {
         btn8.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn8.setBackgroundColor(Color.rgb(152,251,152));
-                btn7.setBackgroundColor(Color.TRANSPARENT);
-                cnt1--;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn8.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn7.setBackgroundColor(Color.TRANSPARENT);
+                    cnt1--;
+                }
                 button1();
                 return false;
             }
@@ -212,9 +213,11 @@ public class Test1Activity extends Fragment {
         btn19.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn19.setBackgroundColor(Color.rgb(152,251,152));
-                btn20.setBackgroundColor(Color.TRANSPARENT);
-                cnt2++;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn19.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn20.setBackgroundColor(Color.TRANSPARENT);
+                    cnt2++;
+                }
                 button2();
                 return false;
             }
@@ -222,9 +225,11 @@ public class Test1Activity extends Fragment {
         btn20.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn20.setBackgroundColor(Color.rgb(152,251,152));
-                btn19.setBackgroundColor(Color.TRANSPARENT);
-                cnt2--;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn20.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn19.setBackgroundColor(Color.TRANSPARENT);
+                    cnt2--;
+                }
                 button2();
                 return false;
             }
@@ -232,9 +237,11 @@ public class Test1Activity extends Fragment {
         btn21.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn21.setBackgroundColor(Color.rgb(152,251,152));
-                btn22.setBackgroundColor(Color.TRANSPARENT);
-                cnt3++;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn21.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn22.setBackgroundColor(Color.TRANSPARENT);
+                    cnt3++;
+                }
                 button3();
                 return false;
             }
@@ -242,9 +249,11 @@ public class Test1Activity extends Fragment {
         btn22.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn22.setBackgroundColor(Color.rgb(152,251,152));
-                btn21.setBackgroundColor(Color.TRANSPARENT);
-                cnt3--;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn22.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn21.setBackgroundColor(Color.TRANSPARENT);
+                    cnt3--;
+                }
                 button3();
                 return false;
             }
@@ -252,9 +261,11 @@ public class Test1Activity extends Fragment {
         btn23.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn23.setBackgroundColor(Color.rgb(152,251,152));
-                btn24.setBackgroundColor(Color.TRANSPARENT);
-                cnt4++;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn23.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn24.setBackgroundColor(Color.TRANSPARENT);
+                    cnt4++;
+                }
                 button4();
                 return false;
             }
@@ -262,13 +273,23 @@ public class Test1Activity extends Fragment {
         btn24.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn24.setBackgroundColor(Color.rgb(152,251,152));
-                btn23.setBackgroundColor(Color.TRANSPARENT);
-                cnt4--;
+                if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    btn24.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn23.setBackgroundColor(Color.TRANSPARENT);
+                    cnt4--;
+                }
                 button4();
                 return false;
             }
         });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),Test1_Result.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -282,9 +303,9 @@ public class Test1Activity extends Fragment {
     }
     public void button2(){
         if(cnt2>0)
-            txt2.setText("I");
-        else if(cnt2<=0)
             txt2.setText("E");
+        else if(cnt2<=0)
+            txt2.setText("I");
     }
     public void button3(){
         if(cnt3>0)
@@ -298,5 +319,4 @@ public class Test1Activity extends Fragment {
         else if(cnt4<=0)
             txt4.setText("J");
     }
-
 }
