@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MypageActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("User");;
+    DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("User");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
