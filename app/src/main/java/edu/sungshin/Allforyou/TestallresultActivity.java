@@ -34,8 +34,6 @@ public class TestallresultActivity extends Fragment {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),Test3ActivityResult.class);
-                startActivity(intent);
             }
         });
         return v;

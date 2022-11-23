@@ -56,7 +56,6 @@ public class Test3Activity3 extends AppCompatActivity {
 
 
         Button btnresult = (Button) findViewById(R.id.btnresult) ;
-        ImageButton btnReturn = (ImageButton) findViewById(R.id.returnbtn);
         btnresult.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,16 +145,5 @@ public class Test3Activity3 extends AppCompatActivity {
 
         }
 
-    public static class Test3Activity extends Fragment {
-        private int count=0;
 
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
-            return inflater.inflate(R.layout.activity_test3, container, false);
-        }
-
-
-    }
 }
