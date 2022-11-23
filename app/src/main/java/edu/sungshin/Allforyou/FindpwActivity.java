@@ -22,6 +22,7 @@ public class FindpwActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;
     private DatabaseReference mDatabaseRef;
+    EditText email;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,34 +30,33 @@ public class FindpwActivity extends AppCompatActivity {
         setContentView(R.layout.activity_findpw);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+        email = (EditText) findViewById(R.id.email);
 
         Button btn = (Button) findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                send();
+                String stremail = email.getText().toString().trim();
+
+                if(stremail.length() > 0){
+                    mFirebaseAuth.sendPasswordResetEmail(stremail)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(FindpwActivity.this, "이메일을 보냈습니다", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }else{
+                    Toast.makeText(FindpwActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
             }
+
         });
 
 
     }
-    private void send() {
-        String stremail = ((EditText) findViewById(R.id.email)).getText().toString().trim();
 
-        if(stremail.length() > 0){
-            mFirebaseAuth.sendPasswordResetEmail(stremail)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(FindpwActivity.this, "이메일을 보냈습니다", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-        }else{
-            Toast.makeText(FindpwActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
-        }
-    }
 }
