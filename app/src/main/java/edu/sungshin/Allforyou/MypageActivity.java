@@ -53,7 +53,6 @@ public class MypageActivity extends AppCompatActivity {
                 auth.signOut();
                 Toast.makeText(MypageActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_LONG).show();
                 finish();
-                //startActivity(new Intent(this, LoginActivity.class));
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });

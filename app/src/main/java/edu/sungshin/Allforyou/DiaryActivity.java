@@ -12,12 +12,15 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DiaryActivity extends Fragment {
 
@@ -25,6 +28,7 @@ public class DiaryActivity extends Fragment {
     SQLiteDatabase sqlDB;
     CalendarView calendarView;
     EditText edt;
+    TextView date;
     Button btn;
     String fileName;
 
@@ -52,6 +56,7 @@ public class DiaryActivity extends Fragment {
         calendarView = v.findViewById(R.id.calendarView);
         edt = v.findViewById(R.id.edt);
         btn = v.findViewById(R.id.btn);
+        date = v.findViewById(R.id.date);
 
         Calendar cal = Calendar.getInstance();
         int cYear = cal.get(Calendar.YEAR);
@@ -59,6 +64,14 @@ public class DiaryActivity extends Fragment {
         int cDay = cal.get(Calendar.DAY_OF_MONTH);
         myHelper = new myDBHelper(getActivity());
 
+        //오늘 날짜 지정
+        Date mDate;
+        SimpleDateFormat mFormat = new SimpleDateFormat("yyyy.MM.dd");
+        mDate = new Date(System.currentTimeMillis());
+        date.setText(mFormat.format(mDate));
+
+
+        //일기장 저장
         fileName = Integer.toString(cYear) + "_"
                 + Integer.toString(cMonth) + "_"
                 + Integer.toString(cDay + 1);
@@ -116,13 +129,13 @@ public class DiaryActivity extends Fragment {
                     sqlDB.execSQL("UPDATE eduDiary SET content = '" + edt.getText().toString() +
                             "' WHERE diaryDate = '" + fileName + "';");
                     sqlDB.close();
-                    Toast.makeText(getActivity().getApplicationContext(), "내용이 수정됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "내용이 수정되었습니다.", Toast.LENGTH_SHORT).show();
 
                 } else {
                     sqlDB = myHelper.getWritableDatabase();
                     sqlDB.execSQL("INSERT INTO eduDiary (diaryDate, content) VALUES ('" + fileName + "' , '" + edt.getText().toString() + "');");
                     sqlDB.close();
-                    Toast.makeText(getActivity().getApplicationContext(), "내용이 저장됨", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity().getApplicationContext(), "내용이 저장되었습니다.", Toast.LENGTH_SHORT).show();
                     btn.setText("수정하기");
                 }
 
