@@ -1,108 +1,141 @@
 package edu.sungshin.Allforyou;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.Calendar;
 
 public class DiaryActivity extends Fragment {
 
+    myDBHelper myHelper;
+    SQLiteDatabase sqlDB;
     CalendarView calendarView;
-    Button btnadd;
-    EditText edittext;
+    EditText edt;
+    Button btn;
     String fileName;
 
+    public class myDBHelper extends SQLiteOpenHelper {
+        public myDBHelper(Context context) {
+            super(context, "eduDB", null, 1);
+        }
+
+
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL("CREATE TABLE eduDiary ( diaryDate char(10), content varchar(500));");
+        }
+
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            db.execSQL("DROP TABLE IF EXISTS eduDiary");
+            onCreate(db);
+        }
+    }
 
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_diary, container, false);
 
-        Button btnadd = v.findViewById(R.id.btnadd);
-        EditText edittext = v.findViewById(R.id.edittext);
-        CalendarView calendarView = v.findViewById(R.id.calendarView);
+
+        calendarView = v.findViewById(R.id.calendarView);
+        edt = v.findViewById(R.id.edt);
+        btn = v.findViewById(R.id.btn);
 
         Calendar cal = Calendar.getInstance();
         int cYear = cal.get(Calendar.YEAR);
         int cMonth = cal.get(Calendar.MONTH);
         int cDay = cal.get(Calendar.DAY_OF_MONTH);
+        myHelper = new myDBHelper(getActivity());
 
-        // 처음 실행시에 설정할 내용
-        fileName = Integer.toString(cYear) + "_" + Integer.toString(cMonth + 1)
-                + "_" + Integer.toString(cDay) + ".txt";
+        fileName = Integer.toString(cYear) + "_"
+                + Integer.toString(cMonth) + "_"
+                + Integer.toString(cDay + 1);
 
-        String diaryStr = null;
-        FileInputStream inFs;
-        try {
-            inFs = getActivity().openFileInput(fileName);
-            byte[] txt = new byte[500];
-            inFs.read(txt);
-            inFs.close();
-            diaryStr = (new String(txt)).trim();
-            btnadd.setText("수정 하기");
-        } catch (IOException e) {
-            edittext.setHint("해당 날짜 일기 없음");
-            btnadd.setText("새로 저장");
+        sqlDB = myHelper.getReadableDatabase();
+        Cursor cursor;
+        cursor = sqlDB.rawQuery("SELECT * FROM eduDiary WHERE diaryDate = '" +
+                fileName + "';", null);
+
+        if (cursor.getCount() == 0) {
+            edt.setText("");
+            edt.setHint("일기 없음");
+            btn.setText("새로 저장");
+        } else {
+            cursor.moveToNext();
+            edt.setText(cursor.getString(0));
+            btn.setText("수정하기");
         }
-        String str = diaryStr;
+        cursor.close();
+        sqlDB.close();
+        btn.setEnabled(true);
 
-        edittext.setText(str);
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int monthOfYear, int dayOfMonth) {
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int monthOfMonth, int dayOfMonth) {
                 fileName = Integer.toString(year) + "_"
-                        + Integer.toString(monthOfYear + 1) + "_"
-                        + Integer.toString(dayOfMonth) + ".txt";
+                        + Integer.toString(monthOfMonth + 1) + "_"
+                        + Integer.toString(dayOfMonth);
 
-                String diaryStr = null;
-                FileInputStream inFs;
-                try {
-                    inFs = getActivity().openFileInput(fileName);
-                    byte[] txt = new byte[500];
-                    inFs.read(txt);
-                    inFs.close();
-                    diaryStr = (new String(txt)).trim();
-                    btnadd.setText("수정 하기");
-                } catch (IOException e) {
-                    edittext.setHint("해당 날짜 일기 없음");
-                    btnadd.setText("새로 저장");
+                sqlDB = myHelper.getReadableDatabase();
+                Cursor cursor;
+                cursor = sqlDB.rawQuery("SELECT content FROM eduDiary WHERE diaryDate = '" + fileName + "';", null);
+                if (cursor.getCount() == 0) {
+                    edt.setText("");
+                    edt.setHint("일기 없음");
+                    btn.setText("새로 저장");
+                } else {
+                    cursor.moveToNext();
+                    edt.setText(cursor.getString(0));
+                    btn.setText("수정하기");
                 }
-                String str = diaryStr;
-
-                edittext.setText(str);
-                btnadd.setEnabled(true);
+                cursor.close();
+                sqlDB.close();
+                btn.setEnabled(true);
             }
+
         });
 
-        btnadd.setOnClickListener(new View.OnClickListener() {
+
+        btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                try {
-                    FileOutputStream outFs = getActivity().openFileOutput(fileName,
-                            Context.MODE_PRIVATE);
-                    String str = edittext.getText().toString();
-                    outFs.write(str.getBytes());
-                    outFs.close();
-//                    Toast.makeText(getApplicationContext(),
-//                            fileName + " 이 저장됨", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
+                if (btn.getText().equals("수정하기")) {
+                    sqlDB = myHelper.getWritableDatabase();
+                    sqlDB.execSQL("UPDATE eduDiary SET content = '" + edt.getText().toString() +
+                            "' WHERE diaryDate = '" + fileName + "';");
+                    sqlDB.close();
+                    Toast.makeText(getActivity().getApplicationContext(), fileName + " 이 수정됨", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    sqlDB = myHelper.getWritableDatabase();
+                    sqlDB.execSQL("INSERT INTO eduDiary (diaryDate, content) VALUES ('" + fileName + "' , '" + edt.getText().toString() + "');");
+                    sqlDB.close();
+                    Toast.makeText(getActivity().getApplicationContext(), fileName + " 이 저장됨", Toast.LENGTH_SHORT).show();
+                    btn.setText("수정하기");
                 }
+
             }
+
         });
+
 
         return v;
+
     }
 
-}
 
+
+
+}
