@@ -4,13 +4,30 @@
     android:id="@+id/baseLayout"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="심리 테스트 3"
+        android:textColor="#000000"
+        android:textSize="20dp" />
 
+    <ImageView
+        android:id="@+id/Img"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:src="@drawable/house"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
         android:text="우리집 그리기"
         android:textSize="40sp" />
 
@@ -18,9 +35,9 @@
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginLeft="130dp"
-        android:text="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="140dp"
+        android:text="시작"
         android:textSize="40sp"
         android:background="#DDD3F8"/>
 

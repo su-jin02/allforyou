@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -49,6 +50,17 @@ public class Test3Activity3 extends AppCompatActivity {
                     }
                 });
 
+
+        Button btnresult = (Button) findViewById(R.id.btnresult) ;
+        btnresult.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Test3ActivityResult.class);
+                startActivity(intent);
+            }
+        });
+
+
         Button btnTh = findViewById(R.id.btnTh);
         btnTh.setOnClickListener((new View.OnClickListener() {
             @Override
@@ -65,15 +77,6 @@ public class Test3Activity3 extends AppCompatActivity {
             }
         }));
 
-        Button btnresult = findViewById(R.id.btnresult);
-        btnresult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Test3Activity3.this,Test3DrawResult.class);
-                startActivity(intent);
-            }
-
-        });
 
         ((Button)findViewById(R.id.btnClear)).setOnClickListener(new View.OnClickListener() {
             @Override

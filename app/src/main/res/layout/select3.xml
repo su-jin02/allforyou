@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -12,18 +17,25 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/exit1"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="5dp"
         />
 
     <TextView
         android:id="@+id/digIv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="45dp"
-        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:textSize="19sp"
         android:text="현재 나의 모습과 감정 상태 알아보기" />
+
+    <TextView
+        android:id="@+id/digIv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="10sp"
+        android:text="해당하는 색을 클릭해주세요" />
 
     <RadioGroup
         android:id="@+id/radio1"
@@ -125,3 +137,4 @@
     </RadioGroup>
 
 </LinearLayout>
+</ScrollView>

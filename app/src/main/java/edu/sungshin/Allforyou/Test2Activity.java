@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 public class Test2Activity extends Fragment {
     private int count=0;
 
-Button option1text,option2text,option3text,option4text;
+Button option1text,option2text,option3text,option4text,result;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -54,6 +54,8 @@ Button option1text,option2text,option3text,option4text;
                 startActivity(intent4);
             }
         });
+
+ 
         return view;
 
     }
