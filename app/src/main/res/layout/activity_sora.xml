@@ -39,7 +39,7 @@
         android:layout_marginLeft="65dp"
         android:layout_marginTop="160dp"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/sora" />
+        android:src="@drawable/akakakak" />
 
     <ImageView
         android:id="@+id/img"
