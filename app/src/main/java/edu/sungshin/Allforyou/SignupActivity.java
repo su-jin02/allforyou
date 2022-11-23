@@ -166,8 +166,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-
-
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,7 +193,6 @@ public class SignupActivity extends AppCompatActivity {
                     Toast.makeText(SignupActivity.this, "비밀번호가 동일하지 않습니다.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
 
                 mFirebaseAuth.createUserWithEmailAndPassword(stremail, strpw).addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -236,7 +233,6 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
-
     private void updateLabel () {
         String myFormat = "yyyy/MM/dd";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
@@ -247,9 +243,3 @@ public class SignupActivity extends AppCompatActivity {
 
 
 }
-
-
-
-
-
-
