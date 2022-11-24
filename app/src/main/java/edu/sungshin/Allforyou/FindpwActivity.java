@@ -31,7 +31,6 @@ public class FindpwActivity extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         email = (EditText) findViewById(R.id.email);
-
         Button btn = (Button) findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +44,7 @@ public class FindpwActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(FindpwActivity.this, "이메일을 보냈습니다", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(FindpwActivity.this, "받으신 메일에서 비밀번호 재설정을 진행해주시면 됩니다", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
