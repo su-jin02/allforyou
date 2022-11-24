@@ -140,7 +140,7 @@
 
         <EditText
             android:id="@+id/pw2"
-            android:layout_width="258dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:hint="비밀번호 확인"
             android:inputType="textPassword"
