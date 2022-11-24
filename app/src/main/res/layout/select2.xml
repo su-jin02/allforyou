@@ -16,8 +16,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="17sp"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
         android:textColor="#000000"
+        android:layout_gravity="center"
         android:text="이제까지의 장애 요인이 무엇인지 알아보기" />
 
     <TextView
@@ -25,7 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="10sp"
+        android:textSize="15sp"
+        android:layout_gravity="center"
         android:text="해당하는 색을 클릭해주세요" />
 
     <RadioGroup
@@ -33,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         >
         <RadioButton
             android:id="@+id/btn21"
@@ -42,7 +45,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_red"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -55,7 +58,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_orange"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -68,7 +71,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_yellow"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -81,7 +84,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_green"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -94,7 +97,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_blue"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -107,7 +110,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_purple"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
@@ -120,7 +123,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="true"
+            android:checked="false"
             android:background="@drawable/testrb_white"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"

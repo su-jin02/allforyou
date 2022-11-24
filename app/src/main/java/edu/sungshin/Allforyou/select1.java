@@ -42,9 +42,11 @@ public class select1 extends AppCompatActivity {
                 t1.setText(rb.getText().toString());
 
             }
-
-
+            
         });
+
+
+
     }
 }
 
