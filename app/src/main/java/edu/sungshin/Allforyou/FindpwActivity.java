@@ -49,8 +49,12 @@ public class FindpwActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-                }else{
+                }
+                else if(stremail.length() == 0){
                     Toast.makeText(FindpwActivity.this, "이메일을 입력해주세요", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(FindpwActivity.this, "존재하지 않는 이메일입니다", Toast.LENGTH_SHORT).show();
                 }
             }
 
