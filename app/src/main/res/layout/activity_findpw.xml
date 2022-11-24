@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
-        android:text="비밀번호를 재설정 하실 수 있는 메일이 전송됩니다."
+        android:text="비밀번호를 재설정 하실 수 있는 메일이 전송됩니다"
         android:layout_marginBottom="5dp"
         android:textSize="10sp"/>
 
@@ -47,6 +47,22 @@
         android:padding="10dp"
         android:textSize="15sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        android:text="비밀번호 재설정*"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:text="해당 메일로 비밀번호 재설정 링크를 보내주는 버튼을 눌러주세요"
+        android:layout_marginBottom="5dp"
+        android:textSize="10sp"/>
+
     <Button
         android:id="@+id/btn"
         android:layout_width="match_parent"
@@ -54,8 +70,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp"
-        android:text="메일로 비밀번호 재설정 링크 보내기"
+        android:text="비밀번호 재설정"
         app:backgroundTint="#DDD3F8"
         app:strokeColor="#000000" />
 
@@ -63,9 +78,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
-        android:text="메일이 도착하지 않으셨다면 스팸 메일함을 한번 확인해주세요."
-        android:textColor="#000000"
+        android:text="* 메일이 도착하지 않으셨다면 스팸 메일함을 한번 확인해주세요"
+        android:textColor="#FF0000"
         android:layout_marginTop="5dp"
-        android:textSize="13sp"/>
+        android:textSize="12sp"/>
 
 </LinearLayout>
