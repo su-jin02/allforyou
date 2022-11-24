@@ -1,5 +1,6 @@
 package edu.sungshin.Allforyou;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,8 @@ public class FindpwActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(FindpwActivity.this, "받으신 메일에서 비밀번호 재설정을 진행해주시면 됩니다", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                                     }
                                 }
                             });
