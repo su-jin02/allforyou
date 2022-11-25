@@ -1,6 +1,9 @@
 package edu.sungshin.Allforyou;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,16 +16,22 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class SoraActivity extends Fragment {
     ImageView img,imageV,image;
     ImageButton start, stop;
     TextView text;
+
+
+
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.activity_sora, container, false);
 
+        String mp3Path = Environment.getExternalStorageDirectory().getPath();
+        final MediaPlayer mplayer = MediaPlayer.create(getActivity(), R.raw.sora);
         ImageView img=v.findViewById(R.id.img);
         ImageView imageV=v.findViewById(R.id.imageV);
         ImageView image=v.findViewById(R.id.image);
@@ -35,33 +44,45 @@ public class SoraActivity extends Fragment {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setVisibility(View.VISIBLE);
-                imageV.setVisibility(View.INVISIBLE);
+
+                    mplayer.start();
+                    mplayer.setLooping(true);
+                    img.setVisibility(View.VISIBLE);
+                    imageV.setVisibility(View.INVISIBLE);
+                    start.setClickable(false);
+                    stop.setClickable(true);
+
 
             }
         });
-
 
 
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                img.setVisibility(View.INVISIBLE);
-                image.setVisibility(View.VISIBLE);
-                String[] randomText=getResources().getStringArray(R.array.randomText);
-                Random random=new Random();
-                int n=random.nextInt(randomText.length-1);
-                AlertDialog.Builder dlg= new AlertDialog.Builder(getActivity());
-                dlg.setTitle("소라고동");
-                dlg.setMessage(randomText[n]);
-                dlg.setPositiveButton("확인",null);
-                dlg.show();
+                    mplayer.pause();
+                    img.setVisibility(View.INVISIBLE);
+                    image.setVisibility(View.VISIBLE);
+                    String[] randomText = getResources().getStringArray(R.array.randomText);
+                    Random random = new Random();
+                    int n = random.nextInt(randomText.length - 1);
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(getActivity());
+                    dlg.setTitle("소라고동");
+                    dlg.setMessage(randomText[n]);
+                    dlg.setPositiveButton("확인", null);
+                    dlg.show();
+                    start.setClickable(true);
+                    stop.setClickable(false);
+
             }
         });
+
+        stop.setClickable(false);
         return v;
 
 
 
 
     }
+
 }
