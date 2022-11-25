@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case android.R.id.home: {
-                finish();
+                onBackPressed();
                 return true;
             }
 
@@ -97,56 +97,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFragmentChange(int index){
         if(index == 1){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test1Activity()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test1Activity()).addToBackStack(null).commit();
         }
 
         else if(index == 2){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).addToBackStack(null).commit();
         }
         else if(index == 3){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).addToBackStack(null).commit();
         }
         else if(index == 4){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,new This_is_Result1()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,new This_is_Result1()).addToBackStack(null).commit();
         }
          else if(index == 5){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2_Result()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2_Result()).addToBackStack(null).commit();
         }
         else if(index == 6){
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3_Result()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3_Result()).addToBackStack(null).commit();
         }
-    }
-
-
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("종료").setMessage("정말로 앱을 종료하시겠습니까?");
-            builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    moveTaskToBack(true);
-                    finishAndRemoveTask();
-                    android.os.Process.killProcess(android.os.Process.myPid());
-                }
-            });
-            builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-
-                }
-            });
-
-            AlertDialog alertDialog = builder.create();
-            alertDialog.show();
-
-        }
-
-        return false;
     }
 
 

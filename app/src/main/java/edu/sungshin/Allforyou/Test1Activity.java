@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,13 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Lifecycle;
 
 import org.checkerframework.checker.units.qual.C;
 
 
-public class Test1Activity extends Fragment {
+public class Test1Activity extends Fragment implements onBackPressedListener {
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn10,btn11,btn12,btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21,btn22,btn23,btn24;
     Integer cnt1=0;
     Integer cnt2=0;
@@ -29,6 +31,14 @@ public class Test1Activity extends Fragment {
     Integer cnt4=0;
     TextView txt1,txt2,txt3,txt4,txt5;
     String text;
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+        getActivity().getSupportFragmentManager().popBackStack();
+    }
+
+
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.activity_test1, container, false);
@@ -311,4 +321,6 @@ public class Test1Activity extends Fragment {
         else if(cnt4<=0)
             txt4.setText("J");
     }
+
+
 }

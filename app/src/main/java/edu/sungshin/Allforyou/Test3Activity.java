@@ -8,10 +8,16 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Test3Activity extends Fragment {
+public class Test3Activity extends Fragment implements onBackPressedListener {
     private int count = 0;
 
     Button start;
+
+    @Override
+    public void onBackPressed() {
+        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+        getActivity().getSupportFragmentManager().popBackStack();
+    }
 
     @Nullable
     @Override

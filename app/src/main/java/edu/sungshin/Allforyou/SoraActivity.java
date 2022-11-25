@@ -1,6 +1,7 @@
 package edu.sungshin.Allforyou;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,12 +20,31 @@ import com.bumptech.glide.Glide;
 import java.io.IOException;
 import java.util.Random;
 
-public class SoraActivity extends Fragment {
+public class SoraActivity extends Fragment implements onBackPressedListener {
     ImageView img,imageV,image;
     ImageButton start, stop;
     TextView text;
+    MainActivity activity;
 
+    @Override
+    public void onBackPressed() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(activity);
+        builder.setTitle("종료").setMessage("정말로 앱을 종료하시겠습니까?");
+        builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                android.os.Process.killProcess(android.os.Process.myPid());
+            }
+        });
+        builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
+            }
+        });
+        android.app.AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
 
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
