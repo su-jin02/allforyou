@@ -39,7 +39,7 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
-            android:backgroundTint="#00bfff"
+            android:background="@drawable/edge"
             android:textColor="#000000"
             android:id="@+id/btn1"
             android:text="바로 침착한 상태를 유지하며 일단 과제를 다시 해본다."
@@ -48,7 +48,7 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="75dp"
-            android:backgroundTint="#ddd3f8"
+            android:background="@drawable/edge"
             android:textColor="#000000"
             android:id="@+id/btn2"
             android:text="자신에게 왜 이런 일이 일어났는지에 대해 생각하고 체념하고 난 후 다시 과제를 한다."
@@ -71,7 +71,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
 
         <Button
             android:id="@+id/btn4"
@@ -79,7 +79,7 @@
             android:layout_height="70dp"
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#ddd3f8"
+            android:background="@drawable/edge"
             android:text="주변인에게 크게 신경쓰지 않는다."
             android:textColor="#000000" />
 
@@ -101,7 +101,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn5"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -110,7 +110,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn6"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn7"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -137,7 +137,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn8"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn9"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -164,7 +164,7 @@
             android:layout_marginTop="10dp"
             android:textColor="#000000"
             android:id="@+id/btn10"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -190,7 +190,7 @@
             android:id="@+id/btn12"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -208,7 +208,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn13"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -217,7 +217,7 @@
             android:id="@+id/btn14"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -235,7 +235,7 @@
             android:layout_marginTop="10dp"
             android:id="@+id/btn15"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -244,7 +244,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -262,7 +262,7 @@
             android:id="@+id/btn17"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -271,7 +271,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -289,7 +289,7 @@
             android:id="@+id/btn19"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -298,7 +298,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -316,7 +316,7 @@
             android:id="@+id/btn21"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -325,7 +325,7 @@
             android:id="@+id/btn22"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -343,7 +343,7 @@
             android:id="@+id/btn23"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#00bfff"/>
+            android:background="@drawable/edge"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="70dp"
@@ -352,7 +352,7 @@
             android:id="@+id/btn24"
             android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:backgroundTint="#ddd3f8"/>
+            android:background="@drawable/edge"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

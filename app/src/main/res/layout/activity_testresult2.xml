@@ -33,15 +33,32 @@
             android:textStyle="bold"
             android:text="선택 1: 나조차 모르고 있던 잠재적인 성격" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FF5722"
+        android:text="빨간색"
+        android:textSize="16sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="빨간색\n활력이 넘치고 독창성이 뛰어난 사람으로, 승부욕이 강해지기 싫어하는 성격이며 한 번 결심하면 이루고자 하는 열정이 큰 편"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#000000"
+        android:text="활력이 넘치고 독창성이 뛰어난 사람으로, 승부욕이 강해지기 싫어하는 성격이며 한 번 결심하면 이루고자 하는 열정이 큰 편"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FF9800"
+        android:text="주황색"
+        android:textSize="16sp"/>
 
      <TextView
         android:layout_width="match_parent"
@@ -50,7 +67,16 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:textColor="#000000"
-        android:text="주황색\n평소 성실하고 책임감이 강한 사람, 쾌활한 편이지만 모험을 좋아하지 않아 안정적인 것을 선호하는 편"/>
+        android:text="평소 성실하고 책임감이 강한 사람, 쾌활한 편이지만 모험을 좋아하지 않아 안정적인 것을 선호하는 편"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#FFEB3B"
+        android:text="노란색"
+        android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -59,19 +85,17 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:textColor="#000000"
-            android:text="노란색\n소극적이지만 정신력이 강하고 실행력이 있는 사람, 온화하고 침착한 성격이지만 필요한 땐 적극적으로 나서는 편"/>
+            android:text="소극적이지만 정신력이 강하고 실행력이 있는 사람, 온화하고 침착한 성격이지만 필요한 땐 적극적으로 나서는 편"/>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:textColor="#000000"
-            android:text="초록색\n리더십이 강하고 매사에 신중하며 이성적으로 판단하는 사람, 행동이 직설적이고 시원시원한 편"/>
-
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#4CAF50"
+        android:text="초록색"
+        android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -80,7 +104,17 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:textColor="#000000"
-                android:text="파란색\n차가워 보이긴 하나 실은 따뜻하고 부드러운 사람, 낯을 많이 가리지만 친해지면 다정하고 의외로 외로움을 많이 타는 편"/>
+            android:text="리더십이 강하고 매사에 신중하며 이성적으로 판단하는 사람, 행동이 직설적이고 시원시원한 편"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#2196F3"
+        android:text="파란색"
+        android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -89,8 +123,16 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:textColor="#000000"
-                android:text="보라색 \n밝고 활발한 성격으로 개성적인 매력을 가진 사람, 무언가에 꽃히면 파고드는 성격이지만 다소 변덕스러운 경향이 있는 편"/>
+            android:text="차가워 보이긴 하나 실은 따뜻하고 부드러운 사람, 낯을 많이 가리지만 친해지면 다정하고 의외로 외로움을 많이 타는 편"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#673AB7"
+        android:text="보라색"
+        android:textSize="16sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -98,7 +140,24 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:textColor="#000000"
-                android:text="흰 색\n부드럽고 예민하며 감성적인 몽상가 스타일을 가진 사람, 감정 표현이 풍부하지만 감정 기복이 심해 사소한 일에도 쉽게 흥분하는 편"/>
+            android:text="밝고 활발한 성격으로 개성적인 매력을 가진 사람, 무언가에 꽃히면 파고드는 성격이지만 다소 변덕스러운 경향이 있는 편"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="#DFDBDB"
+        android:text="흰색"
+        android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#000000"
+            android:text="부드럽고 예민하며 감성적인 몽상가 스타일을 가진 사람, 감정 표현이 풍부하지만 감정 기복이 심해 사소한 일에도 쉽게 흥분하는 편"/>
 </LinearLayout>
 
         <LinearLayout
@@ -126,11 +185,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="빨간색\n지나치게 계산적이어서 역효과가 나며, 현실주의적인 성격이 있어 본인의 재능과 매력을 가로막는 편"/>
+                android:textColor="#FF5722"
+                android:text="빨간색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -138,8 +197,50 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="주황색\n좋은 아이디어를 가지고 있지만 상대방의 반응에 지나치게 신경을 쓰다가 실패하는 경우가 많고 강한 의타심이 있는 편 "/>
+                android:text="지나치게 계산적이어서 역효과가 나며, 현실주의적인 성격이 있어 본인의 재능과 매력을 가로막는 편"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF9800"
+                android:text="주황색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:text="좋은 아이디어를 가지고 있지만 상대방의 반응에 지나치게 신경을 쓰다가 실패하는 경우가 많고 강한 의타심이 있는 편 "/>
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FFEB3B"
+                android:text="노란색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:text="깊은 생각과 고민이 장애물이 되고, 사소한 문제에도 심각하게 반응하여 시간 낭비를 하는 편"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#4CAF50"
+                android:text="초록색"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -148,10 +249,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="노란색\n깊은 생각과 고민이 장애물이 되고, 사소한 문제에도 심각하게 반응하여 시간 낭비를 하는 편"/>
+                android:text="오늘 할 일을 내일로 미루는 경우가 많고 계획을 세우기보단 몰아서 처리하는 경우가 많은 편"/>
 
-
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#2196F3"
+                android:text="파란색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -159,8 +266,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="초록색\n오늘 할 일을 내일로 미루는 경우가 많고 계획을 세우기보단 몰아서 처리하는 경우가 많은 편"/>
+                android:text="지나치게 남의 일에 앞장서고, 사람들에게 인정받고 싶어하는 욕구가 강한 편"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#673AB7"
+                android:text="보라색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -168,8 +283,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="파란색\n지나치게 남의 일에 앞장서고, 사람들에게 인정받고 싶어하는 욕구가 강한 편"/>
+                android:text="열심히 하려고 해도 몸이 안 따라줘서 마음대로 안 되는 일이 많은 편"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#DFDBDB"
+                android:text="흰색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -177,16 +300,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="보라색\n열심히 하려고 해도 몸이 안 따라줘서 마음대로 안 되는 일이 많은 편"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="흰 색\n자신도 모르게 어리광을 부리고 감정을 그대로 드러냈다가 미움을 사는 일이 잦은 편"/>
+                android:text="자신도 모르게 어리광을 부리고 감정을 그대로 드러냈다가 미움을 사는 일이 잦은 편"/>
 
 
         </LinearLayout>
@@ -216,12 +330,28 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF5722"
+                android:text="빨간색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="빨간색\n매사에 의욕이 넘치고 모든 일을 해낼 수 있을 것 같은 자신감이 넘치는 상태"/>
+                android:text="매사에 의욕이 넘치고 모든 일을 해낼 수 있을 것 같은 자신감이 넘치는 상태"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF9800"
+                android:text="주황색"
+                android:textSize="16sp"/>
             <TextView
             android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -229,7 +359,33 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="주황색\n합리적이고 냉정한 사고로 매사에 일을 원활하게 처리하고 자신의 욕망을 잘 컨트롤할 줄 아는 상태 "/>
+                android:text="합리적이고 냉정한 사고로 매사에 일을 원활하게 처리하고 자신의 욕망을 잘 컨트롤할 줄 아는 상태 "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FFEB3B"
+                android:text="노란색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:text="어려움이 있더라도 현명하게 생각하여 긍정적이고 좋은 결과를 가져올 수 있는 상태"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#4CAF50"
+                android:text="초록색"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -238,10 +394,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="노란색\n어려움이 있더라도 현명하게 생각하여 긍정적이고 좋은 결과를 가져올 수 있는 상태"/>
+                android:text="무슨 일이든 적당히만 하고자 하고, 도전적이거나 무리한 일은 하고 싶지 않아 기피하는 상태"/>
 
-
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#2196F3"
+                android:text="파란색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -249,8 +411,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="초록색\n무슨 일이든 적당히만 하고자 하고, 도전적이거나 무리한 일은 하고 싶지 않아 기피하는 상태"/>
+                android:text="어떤 일에도 의욕이 생기지 않는 무기력한 상태"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#673AB7"
+                android:text="보라색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -258,8 +428,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="파란색 \n어떤 일에도 의욕이 생기지 않는 무기력한 상태"/>
+                android:text="아무렇지 않게 넘겼을 일에도 예민하고 걱정이 많아 스트레스를 받고 감정 소모를 하는 상태"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#DFDBDB"
+                android:text="흰색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -267,16 +445,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="보라색\n아무렇지 않게 넘겼을 일에도 예민하고 걱정이 많아 스트레스를 받고 감정 소모를 하는 상태"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="흰 색\n과거의 실패가 발목을 잡아 또 실패할 거라는 부정적인 생각이 많은 상태"/>
+                android:text="과거의 실패가 발목을 잡아 또 실패할 거라는 부정적인 생각이 많은 상태"/>
         </LinearLayout>
 
         <LinearLayout
@@ -304,11 +473,62 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF5722"
+                android:text="빨간색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="빨간색\n남들이 꺼려하는 일에 도전하고 매사에 적극적인 모습을 취하면 자신의 지위를 높이는데 도움"/>
+                android:text="남들이 꺼려하는 일에 도전하고 매사에 적극적인 모습을 취하면 자신의 지위를 높이는데 도움"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FF9800"
+                android:text="주황색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:text="그 날 기분에 따라 컨디션의 영향을 받기 쉬우니 감정 조절에 주의를 기울이고 컨디션 조절할 것"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FFEB3B"
+                android:text="노란색"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:text="어디서든 뛰어난 적응력으로 자신의 개성을 발휘할 수 있음"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#4CAF50"
+                android:text="초록색"
+                android:textSize="16sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -317,8 +537,17 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="주황색\n그 날 기분에 따라 컨디션의 영향을 받기 쉬우니 감정 조절에 주의를 기울이고 컨디션 조절할 것"/>
+                android:text="지나치게 침착하면 기회를 놓칠 수 있으나 가끔은 부딪혀 볼 것"/>
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#2196F3"
+                android:text="파란색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -326,10 +555,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="노란색\n어디서든 뛰어난 적응력으로 자신의 개성을 발휘할 수 있음"/>
+                android:text="새로운 분야에 재능을 발견하게 되고 직업을 바꾸거나 새로운 취미가 생길 수 있음"/>
 
-
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#673AB7"
+                android:text="보라색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -337,9 +572,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="초록색\n지나치게 침착하면 기회를 놓칠 수 있으나 가끔은 부딪혀 볼 것"/>
+                android:text="상상력과 독창성이 향상되고 타인과 협업하면 더욱 큰 성과를 누릴 수 있음"/>
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#DFDBDB"
+                android:text="흰색"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -347,25 +589,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000"
-                android:text="파란색\n새로운 분야에 재능을 발견하게 되고 직업을 바꾸거나 새로운 취미가 생길 수 있음"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="보라색\n상상력과 독창성이 향상되고 타인과 협업하면 더욱 큰 성과를 누릴 수 있음"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:textColor="#000000"
-                android:text="흰 색\n나를 리드해 줄 좋은 파트너를 만나면서 새로운 것에 도전할 수 있는 기회가 생김"/>
+                android:text="나를 리드해 줄 좋은 파트너를 만나면서 새로운 것에 도전할 수 있는 기회가 생김"/>
         </LinearLayout>
 
     </LinearLayout>

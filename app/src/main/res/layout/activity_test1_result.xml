@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ddd3f8"
     tools:context=".Test1_Result">
 
     <TextView
@@ -23,14 +22,14 @@
                 android:layout_weight="1"
                 android:text="ISTJ"
                 android:id="@+id/btn1"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#0000ff"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="istp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#000000"
                 android:id="@+id/btn2"/>
             <Button
@@ -38,7 +37,7 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="isfj"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#22FFAF"
                 android:id="@+id/btn3"/>
             <Button
@@ -46,7 +45,7 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="isfp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#E00000"
                 android:id="@+id/btn4"/>
     </TableRow>
@@ -57,14 +56,14 @@
                 android:layout_weight="1"
                 android:text="intj"
                 android:id="@+id/btn5"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#B6FF6D"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="intp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#FF00E5"
                 android:id="@+id/btn6"/>
             <Button
@@ -72,7 +71,7 @@
                 android:layout_height="67dp"
                 android:text="infj"
                 android:textColor="#DEFD23"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:layout_weight="1"
                 android:id="@+id/btn7"/>
             <Button
@@ -80,7 +79,7 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="infp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#001AFF"
                 android:id="@+id/btn8"/>
     </TableRow>
@@ -90,7 +89,7 @@
                 android:layout_height="67dp"
                 android:text="estj"
                 android:layout_weight="1"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#00DFFE"
                 android:id="@+id/btn9"/>
             <Button
@@ -98,14 +97,14 @@
                 android:layout_height="67dp"
                 android:text="estp"
                 android:layout_weight="1"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#78efad"
                 android:id="@+id/btn10"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="67dp"
                 android:text="esfj"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#0066FE"
                 android:layout_weight="1"
                 android:id="@+id/btn11"/>
@@ -114,7 +113,7 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="esfp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#FEE500"
                 android:id="@+id/btn12"/>
     </TableRow>
@@ -123,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="67dp"
                 android:text="entj"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#EB5454"
                 android:layout_weight="1"
                 android:id="@+id/btn13"/>
@@ -132,15 +131,15 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="entp"
-                android:backgroundTint="#eb70ff"
-                android:textColor="#ffe3ee"
+                android:backgroundTint="#ddd3f8"
+                android:textColor="#C1B5B9"
                 android:id="@+id/btn14"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="67dp"
                 android:text="enfj"
                 android:layout_weight="1"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#00ff00"
                 android:id="@+id/btn15"/>
             <Button
@@ -148,7 +147,7 @@
                 android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="enfp"
-                android:backgroundTint="#eb70ff"
+                android:backgroundTint="#ddd3f8"
                 android:textColor="#BDFF00"
                 android:id="@+id/btn16"/>
     </TableRow>

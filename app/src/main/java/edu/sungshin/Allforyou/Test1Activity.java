@@ -53,7 +53,7 @@ public class Test1Activity extends Fragment {
         btn1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                    btn1.setBackgroundColor(Color.rgb(152,251,152));
+                    btn1.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn2.setBackgroundColor(Color.TRANSPARENT);
 
                 return false;
@@ -62,7 +62,7 @@ public class Test1Activity extends Fragment {
         btn2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                    btn2.setBackgroundColor(Color.rgb(152,251,152));
+                    btn2.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn1.setBackgroundColor(Color.TRANSPARENT);
 
                 return false;
@@ -71,7 +71,7 @@ public class Test1Activity extends Fragment {
         btn3.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                    btn3.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn3.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn4.setBackgroundColor(Color.TRANSPARENT);
 
                 return false;
@@ -81,7 +81,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn4.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn4.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn3.setBackgroundColor(Color.TRANSPARENT);
                 }
                 return false;
@@ -91,7 +91,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn5.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn5.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn6.setBackgroundColor(Color.TRANSPARENT);
                 }
                 return false;
@@ -100,7 +100,7 @@ public class Test1Activity extends Fragment {
         btn6.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn6.setBackgroundColor(Color.rgb(152,251,152));
+                btn6.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn5.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -109,7 +109,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn7.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn7.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn8.setBackgroundColor(Color.TRANSPARENT);
                     cnt1++;
                 }
@@ -121,7 +121,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn8.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn8.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn7.setBackgroundColor(Color.TRANSPARENT);
                     cnt1--;
                 }
@@ -132,7 +132,7 @@ public class Test1Activity extends Fragment {
         btn9.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn9.setBackgroundColor(Color.rgb(152,251,152));
+                btn9.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn10.setBackgroundColor(Color.TRANSPARENT);
 
                 return false;
@@ -141,7 +141,7 @@ public class Test1Activity extends Fragment {
         btn10.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn10.setBackgroundColor(Color.rgb(152,251,152));
+                btn10.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn9.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -149,7 +149,7 @@ public class Test1Activity extends Fragment {
         btn11.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn11.setBackgroundColor(Color.rgb(152,251,152));
+                btn11.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn12.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -157,7 +157,7 @@ public class Test1Activity extends Fragment {
         btn12.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn12.setBackgroundColor(Color.rgb(152,251,152));
+                btn12.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn11.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -165,7 +165,7 @@ public class Test1Activity extends Fragment {
         btn13.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn13.setBackgroundColor(Color.rgb(152,251,152));
+                btn13.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn14.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -173,7 +173,7 @@ public class Test1Activity extends Fragment {
         btn14.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn14.setBackgroundColor(Color.rgb(152,251,152));
+                btn14.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn13.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -181,7 +181,7 @@ public class Test1Activity extends Fragment {
         btn15.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn15.setBackgroundColor(Color.rgb(152,251,152));
+                btn15.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn16.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -189,7 +189,7 @@ public class Test1Activity extends Fragment {
         btn16.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn16.setBackgroundColor(Color.rgb(152,251,152));
+                btn16.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn15.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -197,7 +197,7 @@ public class Test1Activity extends Fragment {
         btn17.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn17.setBackgroundColor(Color.rgb(152,251,152));
+                btn17.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn18.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -205,7 +205,7 @@ public class Test1Activity extends Fragment {
         btn18.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                btn18.setBackgroundColor(Color.rgb(152,251,152));
+                btn18.setBackgroundColor(Color.parseColor("#DDD3F8"));
                 btn17.setBackgroundColor(Color.TRANSPARENT);
                 return false;
             }
@@ -214,7 +214,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn19.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn19.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn20.setBackgroundColor(Color.TRANSPARENT);
                     cnt2++;
                 }
@@ -226,7 +226,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn20.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn20.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn19.setBackgroundColor(Color.TRANSPARENT);
                     cnt2--;
                 }
@@ -238,7 +238,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn21.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn21.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn22.setBackgroundColor(Color.TRANSPARENT);
                     cnt3++;
                 }
@@ -250,7 +250,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn22.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn22.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn21.setBackgroundColor(Color.TRANSPARENT);
                     cnt3--;
                 }
@@ -262,7 +262,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn23.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn23.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn24.setBackgroundColor(Color.TRANSPARENT);
                     cnt4++;
                 }
@@ -274,7 +274,7 @@ public class Test1Activity extends Fragment {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                    btn24.setBackgroundColor(Color.rgb(152, 251, 152));
+                    btn24.setBackgroundColor(Color.parseColor("#DDD3F8"));
                     btn23.setBackgroundColor(Color.TRANSPARENT);
                     cnt4--;
                 }

@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"
-        android:text="해당 메일로 비밀번호 재설정 링크를 보내주는 버튼을 눌러주세요"
+        android:text="해당 버튼을 누르면 비밀번호 재설정 링크를 메일로 전송됩니다."
         android:layout_marginBottom="5dp"
         android:textSize="10sp"/>
 
