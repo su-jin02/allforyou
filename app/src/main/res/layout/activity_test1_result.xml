@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:text="test1 결과 모음집"
         android:textSize="20dp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
-        android:layout_marginTop="5dp"
         android:textColor="#000000"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,20 +23,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
             android:layout_weight="1"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="ISTJ"
                 android:id="@+id/btn1"
                 android:layout_weight="1"
-                android:backgroundTint="#ff7d84"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#0000ff"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="istp"
                 android:backgroundTint="#eb70ff"
@@ -44,18 +44,18 @@
                 android:id="@+id/btn2"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="isfj"
-                android:backgroundTint="#708fff"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#22FFAF"
                 android:id="@+id/btn3"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="isfp"
-                android:backgroundTint="#FFDF70"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#E00000"
                 android:id="@+id/btn4"/>
         </LinearLayout>
@@ -63,38 +63,38 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginTop="-135dp"
+            android:layout_marginTop="-140dp"
             android:orientation="horizontal">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="intj"
                 android:id="@+id/btn5"
-                android:backgroundTint="#DB5454"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#B6FF6D"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="intp"
-                android:backgroundTint="#B0B2B2"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#FF00E5"
                 android:id="@+id/btn6"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="infj"
                 android:textColor="#DEFD23"
-                android:backgroundTint="#FF9179"
+                android:backgroundTint="#eb70ff"
                 android:layout_weight="1"
                 android:id="@+id/btn7"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="infp"
-                android:backgroundTint="#C0F962"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#001AFF"
                 android:id="@+id/btn8"/>
         </LinearLayout>
@@ -106,73 +106,73 @@
             android:orientation="horizontal">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="estj"
                 android:layout_weight="1"
-                android:backgroundTint="#0038FF"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#00DFFE"
                 android:id="@+id/btn9"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="estp"
                 android:layout_weight="1"
-                android:backgroundTint="#001242"
-                android:textColor="#FE00E5"
+                android:backgroundTint="#eb70ff"
+                android:textColor="#78efad"
                 android:id="@+id/btn10"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="esfj"
-                android:backgroundTint="#00FFFF"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#0066FE"
                 android:layout_weight="1"
                 android:id="@+id/btn11"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="esfp"
-                android:backgroundTint="#FF4D4D"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#FEE500"
                 android:id="@+id/btn12"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="-470dp"
+            android:layout_marginTop="-460dp"
             android:orientation="horizontal"
             android:layout_weight="1.5">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="entj"
-                android:backgroundTint="#E4E76C"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#EB5454"
                 android:layout_weight="1"
                 android:id="@+id/btn13"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="entp"
-                android:backgroundTint="#FF008A"
-                android:textColor="#000000"
+                android:backgroundTint="#eb70ff"
+                android:textColor="#ffe3ee"
                 android:id="@+id/btn14"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:text="enfj"
                 android:layout_weight="1"
-                android:backgroundTint="#EBFF00"
-                android:textColor="#FF7A00"
+                android:backgroundTint="#eb70ff"
+                android:textColor="#00ff00"
                 android:id="@+id/btn15"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="67dp"
                 android:layout_weight="1"
                 android:text="enfp"
-                android:backgroundTint="#00A3FF"
+                android:backgroundTint="#eb70ff"
                 android:textColor="#BDFF00"
                 android:id="@+id/btn16"/>
         </LinearLayout>

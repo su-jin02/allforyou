@@ -430,6 +430,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000"
                 android:text="2. 아래에서 올려다본 모습"/>
 
