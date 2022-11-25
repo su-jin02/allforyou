@@ -16,9 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:text="심리 테스트"
-            android:textColor="#000000"
+            android:textColor="#32144f"
+            android:textStyle="bold"
             android:textSize = "25sp"
-            android:paddingTop="50dp"
+            android:paddingTop="40dp"
             android:layout_gravity = "center"
             />
 

@@ -16,6 +16,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="28dp"
         android:text="비밀번호 찾기"
+        android:textColor="#32144f"
+        android:textStyle="bold"
         android:textSize="20sp"/>
 
     <TextView

@@ -29,8 +29,10 @@
         android:layout_marginBottom="77dp"
         android:layout_marginLeft="151dp"
         android:layout_gravity="center"
+        android:textColor="#32144f"
+        android:textStyle="bold"
         android:text="소라고동"
-        android:textSize="25dp"/>
+        android:textSize="25sp"/>
 
     <ImageView
         android:id="@+id/imageV"

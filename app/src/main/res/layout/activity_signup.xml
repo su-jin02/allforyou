@@ -20,8 +20,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginLeft="18dp"
         android:text="회원가입"
+        android:textColor="#32144f"
+        android:textStyle="bold"
         android:textSize="20sp"/>
 
     <TextView
