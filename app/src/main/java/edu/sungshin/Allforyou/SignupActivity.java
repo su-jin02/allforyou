@@ -31,8 +31,10 @@ import com.google.firebase.firestore.auth.User;
 
 import edu.sungshin.Allforyou.LoginActivity;
 
+import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -52,9 +54,23 @@ public class SignupActivity extends AppCompatActivity {
     String strsex;
     boolean chk;
 
+    DatePickerDialog datePickerDialog;
+//    datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
+//        @Override
+//        public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+//            myCalendar.set(Calendar.YEAR, i);
+//            myCalendar.set(Calendar.MONTH, i1);
+//            myCalendar.set(Calendar.DAY_OF_MONTH, i2);
+//
+//        }
+//    })
+
+
+
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
             myCalendar.set(Calendar.YEAR, year);
             myCalendar.set(Calendar.MONTH, month);
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -88,11 +104,39 @@ public class SignupActivity extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("User");
 
-        Button et_Date = (Button) findViewById(R.id.birth);
-        et_Date.setOnClickListener(new View.OnClickListener() {
+        et_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(SignupActivity.this, myDatePicker, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+               new DatePickerDialog(SignupActivity.this, myDatePicker, 2000, 0, 1).show();
+//                datePickerDialog.getDatePicker().setSpinnersShown(true);
+//                datePickerDialog.getDatePicker().setCalendarViewShown(false);
+//                datePickerDialog.show();
+//                DatePickerDialog  datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//                        myCalendar.set(Calendar.YEAR, year);
+//                        myCalendar.set(Calendar.MONTH, month);
+//                        myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+//                        updateLabel();
+//                    }
+//                });
+//                Calendar c = Calendar.getInstance();
+//                int mYear = c.get(Calendar.YEAR);
+//                int mMonth = c.get(Calendar.MONTH);
+//                int mDay = c.get(Calendar.DAY_OF_MONTH);
+//                DatePickerDialog datePickerDialog;
+//
+//                datePickerDialog.getDatePicker().setSpinnersShown(true);
+//                datePickerDialog.getDatePicker().setCalendarViewShown(false);
+
+//                datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
+//
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//                        et_date.setText(year+"/" + (month+1) + "/" + dayOfMonth);
+//                    }
+//                }, mYear, mMonth, mDay);
+//                datePickerDialog.show();
             }
         });
 
