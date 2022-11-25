@@ -44,15 +44,12 @@ public class SoraActivity extends Fragment {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     mplayer.start();
                     mplayer.setLooping(true);
                     img.setVisibility(View.VISIBLE);
                     imageV.setVisibility(View.INVISIBLE);
                     start.setClickable(false);
                     stop.setClickable(true);
-
-
             }
         });
 
@@ -73,7 +70,6 @@ public class SoraActivity extends Fragment {
                     dlg.show();
                     start.setClickable(true);
                     stop.setClickable(false);
-
             }
         });
 
