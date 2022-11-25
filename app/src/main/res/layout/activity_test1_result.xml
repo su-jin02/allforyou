@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ddd3f8"
+    android:background="#F8F8FF"
+
     tools:context=".Test1_Result">
 
     <TextView
@@ -15,7 +16,8 @@
         android:textSize="20dp"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:textColor="#000000"/>
+        android:textColor="#32144f"
+        android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

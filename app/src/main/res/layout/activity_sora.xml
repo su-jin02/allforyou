@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -27,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="71dp"
         android:layout_marginBottom="77dp"
-        android:layout_marginLeft="151dp"
+        android:layout_marginLeft="150dp"
         android:layout_gravity="center"
         android:textColor="#32144f"
         android:textStyle="bold"

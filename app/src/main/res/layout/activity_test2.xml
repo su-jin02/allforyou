@@ -6,6 +6,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#FFFFFF"
     android:layout_height="match_parent"
     xmlns:andorid="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -20,7 +21,8 @@
         android:layout_marginBottom="20dp"
         android:layout_gravity = "center"
         android:text="심리 테스트 2"
-        android:textColor="#000000"
+        android:textColor="#32144f"
+        android:textStyle="bold"
         android:textSize="20dp"/>
 
     <TextView

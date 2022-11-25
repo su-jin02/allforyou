@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/baseLayout"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <TextView
@@ -12,7 +13,8 @@
         android:layout_marginTop="80dp"
         android:layout_marginBottom="15dp"
         android:text="심리 테스트 3"
-        android:textColor="#000000"
+        android:textColor="#32144f"
+        android:textStyle="bold"
         android:textSize="20dp" />
 
     <ImageView

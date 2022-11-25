@@ -7,17 +7,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="#FFFFFF"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="75dp"
-            android:text="대학생 캐릭터 테스트"
-            android:textSize="27dp"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="대학생 캐릭터 테스트"
+            android:textColor="#32144f"
+            android:textStyle="bold"
+            android:textSize="27dp"
+            android:layout_marginLeft="54dp"
             android:layout_marginTop="32dp"
-            android:textColor="#000000"
-            android:backgroundTint="#00ffff"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
