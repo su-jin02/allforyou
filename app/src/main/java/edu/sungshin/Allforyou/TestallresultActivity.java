@@ -1,5 +1,6 @@
 package edu.sungshin.Allforyou;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,37 +14,51 @@ import androidx.fragment.app.Fragment;
 
 
 public class TestallresultActivity extends Fragment {
-    Button btn1,btn2,btn3;
-    @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v= inflater.inflate(R.layout.activity_testallresult, container, false);
-        btn1=(Button) v.findViewById(R.id.btn1);
-        btn2=(Button) v.findViewById(R.id.btn2);
-        btn3=(Button) v.findViewById(R.id.btn3);
+        edu.sungshin.Allforyou.MainActivity activity;
+
+        @Override
+        public void onAttach(Context context){
+            super.onAttach(context);
+            activity = (MainActivity)getActivity();
+        }
+
+        @Override
+        public void onDetach(){
+            super.onDetach();
+            activity = null;
+        }
 
 
+        @Override
+        public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            ViewGroup rootview = (ViewGroup) inflater.inflate(R.layout.activity_testallresult, container, false);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),Test1_Result.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(intent);
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            Button btn11 = (Button) rootview.findViewById(R.id.btn11);
+            Button btn21 = (Button) rootview.findViewById(R.id.btn21);
+            Button btn31 = (Button) rootview.findViewById(R.id.btn31);
 
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
-        return v;
+            btn11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    activity.onFragmentChange(4);
+                }
+            });
 
+
+            btn21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    activity.onFragmentChange(5);
+                }
+            });
+
+            btn31.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    activity.onFragmentChange(6);
+                }
+            });
+
+            return rootview;
+        }
     }
-
-}

@@ -106,7 +106,18 @@ public class MainActivity extends AppCompatActivity {
         else if(index == 3){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).commit();
         }
+        else if(index == 4){
+
+        }
+         else if(index == 5){
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2_Result()).commit();
+        }
+        else if(index == 6){
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3_Result()).commit();
+        }
     }
+
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
