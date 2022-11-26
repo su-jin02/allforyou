@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else {
+            n = 0;
             onBackPressed();
         }
         return false;
