@@ -107,7 +107,7 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               //new DatePickerDialog(SignupActivity.this, myDatePicker, 2000, 0, 1).show();
+
                 Calendar c = Calendar.getInstance();
                 DatePickerDialog datePickerDialog = new DatePickerDialog(SignupActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, new DatePickerDialog.OnDateSetListener() {
                     @Override
@@ -125,43 +125,7 @@ public class SignupActivity extends AppCompatActivity {
                 datePickerDialog.getDatePicker().setCalendarViewShown(false);
                 datePickerDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                 datePickerDialog.show();
-                /*
-                DatePickerDialog dialog = new DatePickerDialog(SignupActivity.this, listener, 2000, 0, 1);
-                dialog.getDatePicker().setSpinnersShown(true);
-                //dialog.getDatePicker().setCalendarViewShown(false);
-                dialog.show();
 
-
-//                datePickerDialog.getDatePicker().setSpinnersShown(true);
-//                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-//                datePickerDialog.show();
-//                DatePickerDialog  datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
-//                    @Override
-//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                        myCalendar.set(Calendar.YEAR, year);
-//                        myCalendar.set(Calendar.MONTH, month);
-//                        myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-//                        updateLabel();
-//                    }
-//                });
-//                Calendar c = Calendar.getInstance();
-//                int mYear = c.get(Calendar.YEAR);
-//                int mMonth = c.get(Calendar.MONTH);
-//                int mDay = c.get(Calendar.DAY_OF_MONTH);
-//                DatePickerDialog datePickerDialog;
-//
-//                datePickerDialog.getDatePicker().setSpinnersShown(true);
-//                datePickerDialog.getDatePicker().setCalendarViewShown(false);
-//                  datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
-
-//                   @Override
-//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                        et_date.setText(year+"/" + (month+1) + "/" + dayOfMonth);
-//                    }
-//                }, mYear, mMonth, mDay);
-//                datePickerDialog.show();
-
-                 */
             }
         });
 
