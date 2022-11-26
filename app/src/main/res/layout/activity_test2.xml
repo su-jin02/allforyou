@@ -17,24 +17,22 @@
         android:id="@+id/test2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:layout_gravity = "center"
-        android:text="심리 테스트 2"
+        android:text="색상 심리 테스트"
         android:textColor="#32144f"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="25dp"/>
 
     <TextView
-        android:id="@+id/ColortText"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
-        android:text="Color Test"
-        android:layout_gravity = "center"
-        android:gravity = "center"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:background="@drawable/eatesttext" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# 색깔로 보는 나의 성격은?"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"/>
+
+
 
     <ImageView
         android:id="@+id/Img"

@@ -10,11 +10,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test1 결과 모음집"
+        android:text="대학생 캐릭터 결과 모음집"
         android:textSize="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textStyle="bold"/>
     <TableRow>
             <Button
                 android:layout_width="wrap_content"
