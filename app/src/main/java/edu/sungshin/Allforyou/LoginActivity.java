@@ -53,14 +53,12 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser user = mFirebaseAuth.getCurrentUser();
 
         if(user != null){
-
        // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
         user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
                 if(task.isSuccessful()) {
                     String idToken = task.getResult().getToken();
-                    //Log.d(TAG,"아이디 토큰 = " + idToken);
                     Intent homeMove_intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(homeMove_intent);
                 }
@@ -123,10 +121,4 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-//    fun moveMainPage(user: FirebaseUser?){
-//        if( user!= null){
-//            startActivity(Intent(this,MainActivity::class.java));
-//            finish();
-//        }
-//    }
 }
