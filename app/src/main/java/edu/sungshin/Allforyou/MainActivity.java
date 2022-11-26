@@ -117,6 +117,37 @@ public class MainActivity extends AppCompatActivity {
             alertDialog.show();
     }
 
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(n==0) {
+            if (keyCode == KeyEvent.KEYCODE_BACK) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("종료").setMessage("정말로 앱을 종료하시겠습니까?");
+                builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        moveTaskToBack(true);
+                        finishAndRemoveTask();
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                    }
+                });
+                builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        }
+        else {
+            onBackPressed();
+        }
+        return false;
+    }
+
     public void onFragmentChange(int index){
         if(index == 1){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test1Activity()).addToBackStack(null).commit();
