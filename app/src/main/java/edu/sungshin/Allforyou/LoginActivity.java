@@ -50,10 +50,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //자동로그인
-        mFirebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mFirebaseAuth.getCurrentUser();
 
-/*
+        if(user != null){
+
        // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
         user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
             @Override
@@ -65,10 +65,10 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(homeMove_intent);
                 }
             }
-        });
+        });}
 
 
- */
+
 
 
 
