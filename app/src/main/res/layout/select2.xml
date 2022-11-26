@@ -20,6 +20,7 @@
         android:layout_marginTop="40dp"
         android:textSize="20sp"
         android:textColor="#000000"
+        android:textStyle="bold"
         android:layout_gravity="center"
         android:text="이제까지의 장애 요인이 무엇인지 알아보기" />
 
@@ -46,11 +47,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_red"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 빨간색\n 지나치게 계산적이어서 역효과가 나며, 현실주의적인 성격이 있어 본인의 재능과 매력을 가로막는 편"/>
+            android:text="빨간색\n지나치게 계산적이어서 역효과가 나며, 현실주의적인 성격이 있어 본인의 재능과 매력을 가로막는 편"/>
 
         <RadioButton
             android:id="@+id/btn22"
@@ -59,11 +59,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_orange"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 주황색\n 좋은 아이디어를 가지고 있지만 상대방의 반응에 지나치게 신경을 쓰다가 실패하는 경우가 많고 강한 의타심이 있는 편 "/>
+            android:text="주황색\n좋은 아이디어를 가지고 있지만 상대방의 반응에 지나치게 신경을 쓰다가 실패하는 경우가 많고 강한 의타심이 있는 편 "/>
 
         <RadioButton
             android:id="@+id/btn23"
@@ -72,11 +71,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_yellow"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 노란색\n 깊은 생각과 고민이 장애물이 되고, 사소한 문제에도 심각하게 반응하여 시간 낭비를 하는 편"/>
+            android:text="노란색\n깊은 생각과 고민이 장애물이 되고, 사소한 문제에도 심각하게 반응하여 시간 낭비를 하는 편"/>
 
         <RadioButton
             android:id="@+id/btn24"
@@ -85,11 +83,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_green"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 초록색\n 오늘 할 일을 내일로 미루는 경우가 많고 계획을 세우기보단 몰아서 처리하는 경우가 많은 편"/>
+            android:text="초록색\n오늘 할 일을 내일로 미루는 경우가 많고 계획을 세우기보단 몰아서 처리하는 경우가 많은 편"/>
 
         <RadioButton
             android:id="@+id/btn25"
@@ -98,11 +95,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_blue"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 파란색\n 지나치게 남의 일에 앞장서고, 사람들에게 인정받고 싶어하는 욕구가 강한 편"/>
+            android:text="파란색\n지나치게 남의 일에 앞장서고, 사람들에게 인정받고 싶어하는 욕구가 강한 편"/>
 
         <RadioButton
             android:id="@+id/btn26"
@@ -111,11 +107,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_purple"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 보라색\n 열심히 하려고 해도 몸이 안 따라줘서 마음대로 안 되는 일이 많은 편"/>
+            android:text="보라색\n열심히 하려고 해도 몸이 안 따라줘서 마음대로 안 되는 일이 많은 편"/>
 
         <RadioButton
             android:id="@+id/btn27"
@@ -124,11 +119,10 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_white"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 흰 색\n 자신도 모르게 어리광을 부리고 감정을 그대로 드러냈다가 미움을 사는 일이 잦은 편"/>
+            android:text="흰 색\n자신도 모르게 어리광을 부리고 감정을 그대로 드러냈다가 미움을 사는 일이 잦은 편"/>
     </RadioGroup>
 
 

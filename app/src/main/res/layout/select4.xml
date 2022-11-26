@@ -21,6 +21,7 @@
         android:layout_gravity="center"
         android:textSize="18sp"
         android:textColor="#000000"
+        android:textStyle="bold"
         android:text="앞으로의 미래와 살아가는 데 도움이 되는 팁 알아보기" />
 
     <TextView
@@ -40,95 +41,88 @@
         android:layout_marginTop="70dp"
         >
         <RadioButton
-            android:id="@+id/btn21"
+            android:id="@+id/btn41"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_red"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 빨간색\n 남들이 꺼려하는 일에 도전하고 매사에 적극적인 모습을 취하면 자신의 지위를 높이는데 도움"/>
+            android:text="빨간색\n남들이 꺼려하는 일에 도전하고 매사에 적극적인 모습을 취하면 자신의 지위를 높이는데 도움"/>
 
         <RadioButton
-            android:id="@+id/btn22"
+            android:id="@+id/btn42"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_orange"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 주황색\n 그 날 기분에 따라 컨디션의 영향을 받기 쉬우니 감정 조절에 주의를 기울이고 컨디션 조절할 것"/>
+            android:text="주황색\n그 날 기분에 따라 컨디션의 영향을 받기 쉬우니 감정 조절에 주의를 기울이고 컨디션 조절할 것"/>
 
         <RadioButton
-            android:id="@+id/btn23"
+            android:id="@+id/btn43"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_yellow"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 노란색\n 어디서든 뛰어난 적응력으로 자신의 개성을 발휘할 수 있음"/>
+            android:text="노란색\n어디서든 뛰어난 적응력으로 자신의 개성을 발휘할 수 있음"/>
 
         <RadioButton
-            android:id="@+id/btn24"
+            android:id="@+id/btn44"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_green"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 초록색\n 지나치게 침착하면 기회를 놓칠 수 있으나 가끔은 부딪혀 볼 것"/>
+            android:text="초록색\n지나치게 침착하면 기회를 놓칠 수 있으나 가끔은 부딪혀 볼 것"/>
 
         <RadioButton
-            android:id="@+id/btn25"
+            android:id="@+id/btn45"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_blue"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 파란색\n 새로운 분야에 재능을 발견하게 되고 직업을 바꾸거나 새로운 취미가 생길 수 있음"/>
+            android:text="파란색\n새로운 분야에 재능을 발견하게 되고 직업을 바꾸거나 새로운 취미가 생길 수 있음"/>
 
         <RadioButton
-            android:id="@+id/btn26"
+            android:id="@+id/btn46"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_purple"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 보라색\n 상상력과 독창성이 향상되고 타인과 협업하면 더욱 큰 성과를 누릴 수 있음"/>
+            android:text="보라색\n상상력과 독창성이 향상되고 타인과 협업하면 더욱 큰 성과를 누릴 수 있음"/>
 
         <RadioButton
-            android:id="@+id/btn27"
+            android:id="@+id/btn47"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:checked="false"
             android:background="@drawable/testrb_white"
             android:textColor="@drawable/test2_radiobutton_text"
             android:button="@null"
-            android:text=" 흰 색\n 나를 리드해 줄 좋은 파트너를 만나면서 새로운 것에 도전할 수 있는 기회가 생김"/>
+            android:text="흰 색\n나를 리드해 줄 좋은 파트너를 만나면서 새로운 것에 도전할 수 있는 기회가 생김"/>
     </RadioGroup>
 
     <Button
