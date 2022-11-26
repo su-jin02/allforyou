@@ -108,10 +108,27 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                //new DatePickerDialog(SignupActivity.this, myDatePicker, 2000, 0, 1).show();
+                Calendar c = Calendar.getInstance();
+                DatePickerDialog datePickerDialog = new DatePickerDialog(SignupActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
+                        try {
+                            Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(year+"-"+(monthOfYear+1)+"-"+dayOfMonth);
+                            et_date.setText(year+"/" + (monthOfYear+1) + "/" + dayOfMonth);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
+
+                datePickerDialog.getDatePicker().setCalendarViewShown(false);
+                datePickerDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+                datePickerDialog.show();
+                /*
                 DatePickerDialog dialog = new DatePickerDialog(SignupActivity.this, listener, 2000, 0, 1);
                 dialog.getDatePicker().setSpinnersShown(true);
-                dialog.getDatePicker().setCalendarViewShown(false);
+                //dialog.getDatePicker().setCalendarViewShown(false);
                 dialog.show();
 
 
@@ -143,6 +160,8 @@ public class SignupActivity extends AppCompatActivity {
 //                    }
 //                }, mYear, mMonth, mDay);
 //                datePickerDialog.show();
+
+                 */
             }
         });
 
