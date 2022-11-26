@@ -32,8 +32,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dp"/>
 
-
-
     <ImageView
         android:id="@+id/Img"
         android:layout_marginTop="18dp"
@@ -69,7 +67,6 @@
             android:layout_height="30dp"
             android:layout_marginRight="60dp"
             android:layout_marginLeft="20dp"/>
-
 
         <Button
             android:id="@+id/option1text"

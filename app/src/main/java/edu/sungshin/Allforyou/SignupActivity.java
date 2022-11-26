@@ -128,10 +128,9 @@ public class SignupActivity extends AppCompatActivity {
 //
 //                datePickerDialog.getDatePicker().setSpinnersShown(true);
 //                datePickerDialog.getDatePicker().setCalendarViewShown(false);
+//                  datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
 
-//                datePickerDialog = new DatePickerDialog(SignupActivity.this, new DatePickerDialog.OnDateSetListener() {
-//
-//                    @Override
+//                   @Override
 //                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 //                        et_date.setText(year+"/" + (month+1) + "/" + dayOfMonth);
 //                    }
