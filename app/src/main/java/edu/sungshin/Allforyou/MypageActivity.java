@@ -42,7 +42,6 @@ public class MypageActivity extends AppCompatActivity {
         TextView mygender = (TextView) findViewById(R.id.gender);
         Button logout = (Button) findViewById(R.id.logout);
         Button delete = (Button) findViewById(R.id.delete);
-
         auth= FirebaseAuth.getInstance();
 
 
