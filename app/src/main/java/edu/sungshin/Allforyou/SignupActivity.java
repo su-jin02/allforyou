@@ -107,7 +107,14 @@ public class SignupActivity extends AppCompatActivity {
         et_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               new DatePickerDialog(SignupActivity.this, myDatePicker, 2000, 0, 1).show();
+               //new DatePickerDialog(SignupActivity.this, myDatePicker, 2000, 0, 1).show();
+
+                DatePickerDialog dialog = new DatePickerDialog(SignupActivity.this, listener, 2000, 0, 1);
+                dialog.getDatePicker().setSpinnersShown(true);
+                dialog.getDatePicker().setCalendarViewShown(false);
+                dialog.show();
+
+
 //                datePickerDialog.getDatePicker().setSpinnersShown(true);
 //                datePickerDialog.getDatePicker().setCalendarViewShown(false);
 //                datePickerDialog.show();
@@ -293,6 +300,16 @@ public class SignupActivity extends AppCompatActivity {
         Button et_date = (Button) findViewById(R.id.birth);
         et_date.setText(sdf.format(myCalendar.getTime()));
     }
+
+    private DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            Button et_date = (Button) findViewById(R.id.birth);
+            //et_date.setText(sdf.format(myCalendar.getTime()));
+            et_date.setText(year + "년" + monthOfYear+1 + "월" + dayOfMonth +"일");
+            //Toast.makeText(getApplicationContext(), year + "년" + monthOfYear + "월" + dayOfMonth +"일", Toast.LENGTH_SHORT).show();
+        }
+    };
 
 
 }
