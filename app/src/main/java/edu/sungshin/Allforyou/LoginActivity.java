@@ -2,6 +2,7 @@ package edu.sungshin.Allforyou;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,8 +17,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.annotations.NotNull;
 
 import edu.sungshin.Allforyou.MainActivity;
 import edu.sungshin.Allforyou.SignupActivity;
@@ -41,6 +44,24 @@ public class LoginActivity extends AppCompatActivity {
 
         EditText etext1 = (EditText) findViewById(R.id.etext1);
         EditText etext2 = (EditText) findViewById(R.id.etext2);
+
+
+        //자동로그인
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+
+       // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
+        user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
+                if(task.isSuccessful()) {
+                    String idToken = task.getResult().getToken();
+                    //Log.d(TAG,"아이디 토큰 = " + idToken);
+                    Intent homeMove_intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(homeMove_intent);
+                }
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,4 +112,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+//    fun moveMainPage(user: FirebaseUser?){
+//        if( user!= null){
+//            startActivity(Intent(this,MainActivity::class.java));
+//            finish();
+//        }
+//    }
 }
