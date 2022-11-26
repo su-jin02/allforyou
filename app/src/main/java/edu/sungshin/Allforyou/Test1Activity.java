@@ -1,5 +1,7 @@
 package edu.sungshin.Allforyou;
 
+import static edu.sungshin.Allforyou.MainActivity.n;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -34,9 +36,10 @@ public class Test1Activity extends Fragment implements onBackPressedListener {
 
     @Override
     public void onBackPressed() {
-        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
-        getActivity().getSupportFragmentManager().popBackStack();
+            getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+            getActivity().getSupportFragmentManager().popBackStack();
     }
+
 
 
     @Override

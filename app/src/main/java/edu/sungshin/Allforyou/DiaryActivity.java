@@ -34,7 +34,7 @@ public class DiaryActivity extends Fragment implements onBackPressedListener  {
     Button btn;
     String fileName;
     MainActivity activity;
-
+    long pressedTime = 0;
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

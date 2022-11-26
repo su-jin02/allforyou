@@ -1,5 +1,7 @@
 package edu.sungshin.Allforyou;
 
+import static edu.sungshin.Allforyou.MainActivity.n;
+
 import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.os.Bundle;
@@ -18,8 +20,8 @@ public class This_is_Result1 extends Fragment implements onBackPressedListener {
 
     @Override
     public void onBackPressed() {
-        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
-        getActivity().getSupportFragmentManager().popBackStack();
+            getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+            getActivity().getSupportFragmentManager().popBackStack();
     }
 
     @Override

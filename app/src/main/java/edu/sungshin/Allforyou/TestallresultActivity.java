@@ -29,7 +29,7 @@ public class TestallresultActivity extends Fragment implements onBackPressedList
             super.onDetach();
             activity = null;
         }
-
+    long pressedTime = 0;
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

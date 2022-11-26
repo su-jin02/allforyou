@@ -43,7 +43,7 @@ public class LuckActivity extends Fragment implements onBackPressedListener {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     MainActivity activity;
-
+    long pressedTime = 0;
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);

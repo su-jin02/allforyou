@@ -25,7 +25,7 @@ public class SoraActivity extends Fragment implements onBackPressedListener {
     ImageButton start, stop;
     TextView text;
     MainActivity activity;
-
+    long pressedTime = 0;
     @Override
     public void onBackPressed() {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(activity);

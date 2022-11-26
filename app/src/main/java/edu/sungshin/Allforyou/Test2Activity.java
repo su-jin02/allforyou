@@ -1,5 +1,7 @@
 package edu.sungshin.Allforyou;
 
+import static edu.sungshin.Allforyou.MainActivity.n;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,9 +22,10 @@ Button option1text,option2text,option3text,option4text,result;
 
     @Override
     public void onBackPressed() {
-        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
-        getActivity().getSupportFragmentManager().popBackStack();
+            getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+            getActivity().getSupportFragmentManager().popBackStack();
     }
+
 
     @Nullable
     @Override

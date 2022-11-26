@@ -19,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-
+    static int n = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,12 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case android.R.id.home: {
-                onBackPressed();
+                if(n!=0) {
+                    n = 0;
+                    onBackPressed();
+                }
+                else if (n==0)
+                    onBackPressed2();
                 return true;
             }
 
@@ -94,26 +99,49 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onBackPressed2() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("종료").setMessage("정말로 앱을 종료하시겠습니까?");
+            builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                }
+            });
+            builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+    }
 
     public void onFragmentChange(int index){
         if(index == 1){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test1Activity()).addToBackStack(null).commit();
+            n=1;
         }
 
         else if(index == 2){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2Activity()).addToBackStack(null).commit();
+            n=1;
         }
         else if(index == 3){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3Activity()).addToBackStack(null).commit();
+            n=1;
         }
         else if(index == 4){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame,new This_is_Result1()).addToBackStack(null).commit();
+            n=1;
         }
          else if(index == 5){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test2_Result()).addToBackStack(null).commit();
+            n=1;
         }
         else if(index == 6){
             getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new Test3_Result()).addToBackStack(null).commit();
+            n=1;
         }
     }
 

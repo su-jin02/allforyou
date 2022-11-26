@@ -1,5 +1,7 @@
 package edu.sungshin.Allforyou;
 
+import static edu.sungshin.Allforyou.MainActivity.n;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +15,10 @@ public class Test3_Result extends Fragment implements onBackPressedListener {
 
     @Override
     public void onBackPressed() {
-        getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
-        getActivity().getSupportFragmentManager().popBackStack();
+            getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
+            getActivity().getSupportFragmentManager().popBackStack();
     }
+
 
         @Nullable
         @Override
