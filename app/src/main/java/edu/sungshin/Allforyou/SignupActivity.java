@@ -263,7 +263,7 @@ public class SignupActivity extends AppCompatActivity {
                             //hashMap.put("signup", sign);
 
                             mDatabaseRef.child(uid).setValue(hashMap);
-
+                            mFirebaseAuth.signOut();
                             Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                             startActivity(intent);
                             finish();
