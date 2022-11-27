@@ -29,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MypageActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
+    String sign;
     DatabaseReference mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("User");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class MypageActivity extends AppCompatActivity {
         Button logout = (Button) findViewById(R.id.logout);
         Button delete = (Button) findViewById(R.id.delete);
         auth= FirebaseAuth.getInstance();
+        //mysign = "true";
 
 
         //로그아웃
@@ -52,6 +54,7 @@ public class MypageActivity extends AppCompatActivity {
                 auth.signOut();
                 Toast.makeText(MypageActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_LONG).show();
                 finish();
+                //sign = "false";
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
@@ -69,6 +72,7 @@ public class MypageActivity extends AppCompatActivity {
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
+                                                //sign = "false";
                                                 Toast.makeText(MypageActivity.this, "계정이 삭제 되었습니다.", Toast.LENGTH_LONG).show();
                                                 finish();
                                                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
@@ -86,6 +90,23 @@ public class MypageActivity extends AppCompatActivity {
                 alert_confirm.show();
             }
         });
+
+        /*
+        mDatabaseRef.child(auth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sign = dataSnapshot.getValue(String.class);
+                //sign = "false";
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+            }
+        });
+
+         */
+
+
 
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("birth").addValueEventListener(new ValueEventListener() {
             @Override

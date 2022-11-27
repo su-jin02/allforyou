@@ -51,7 +51,7 @@ public class SignupActivity extends AppCompatActivity {
     RadioGroup radio_group;
     RadioButton radio_button_man, radio_button_woman, radio_button_else;
     Calendar myCalendar = Calendar.getInstance();
-    String strsex;
+    String strsex, sign;
     boolean chk;
 
     DatePickerDialog datePickerDialog;
@@ -100,8 +100,10 @@ public class SignupActivity extends AppCompatActivity {
         radio_button_else = findViewById(R.id.radio_button_else);
         Button et_date = (Button) findViewById(R.id.birth);
         chk = false;
+        //sign = "false";
 
         mFirebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("User");
 
         et_date.setOnClickListener(new View.OnClickListener() {
@@ -209,6 +211,8 @@ public class SignupActivity extends AppCompatActivity {
                 String strpw2 = pw2.getText().toString().trim();
                 String strname = name.getText().toString().trim();
                 String strbirth = et_date.getText().toString().trim();
+
+
                 radio_group = findViewById(R.id.radio_group);
                 String strbutton = strsex;
 
@@ -246,9 +250,8 @@ public class SignupActivity extends AppCompatActivity {
                             FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
                             String stremail = firebaseUser.getEmail();
                             String uid = firebaseUser.getUid();
-                            //String strbirth = et_date.getText().toString().trim();
-                            //String strname = name.getText().toString().trim();
                             String strpw = pw.getText().toString().trim();
+                            sign = "true";
 
                             HashMap<Object, String> hashMap = new HashMap<>();
                             hashMap.put("uid", uid);
@@ -257,6 +260,7 @@ public class SignupActivity extends AppCompatActivity {
                             hashMap.put("name", strname);
                             hashMap.put("pw", strpw);
                             hashMap.put("sex", strbutton);
+                            //hashMap.put("signup", sign);
 
                             mDatabaseRef.child(uid).setValue(hashMap);
 

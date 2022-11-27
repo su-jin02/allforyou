@@ -20,8 +20,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.NotNull;
 
 import edu.sungshin.Allforyou.MainActivity;
@@ -32,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private DatabaseReference mDatabaseRef;
     PreferenceManager myPre;
+    String sign = "false";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +52,43 @@ public class LoginActivity extends AppCompatActivity {
         EditText etext1 = (EditText) findViewById(R.id.etext1);
         EditText etext2 = (EditText) findViewById(R.id.etext2);
 
+/*
+        mDatabaseRef.child(mFirebaseAuth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sign = dataSnapshot.getValue(String.class);
+                //sign = "false";
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+            }
+        });
+
+ */
 
         //자동로그인
         FirebaseUser user = mFirebaseAuth.getCurrentUser();
 
-        if(user != null){
+        if(user!= null){
+        user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
+                if(task.isSuccessful()) {
+                    String idToken = task.getResult().getToken();
+                    Intent homeMove_intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(homeMove_intent);
+                }
+            }
+        });
+    }
+/*
+        if(sign == "true"){
+            sign = "false";
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+        }
+        else{
        // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
         user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
             @Override
@@ -63,7 +99,10 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(homeMove_intent);
                 }
             }
-        });}
+        });
+        }
+
+ */
 
 
 
@@ -86,11 +125,10 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-
+                            //sign = "true";
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();
-
                             Toast.makeText(LoginActivity.this, "로그인에 성공했습니다", Toast.LENGTH_SHORT).show();
 
                         }
