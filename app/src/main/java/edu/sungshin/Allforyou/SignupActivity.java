@@ -251,7 +251,7 @@ public class SignupActivity extends AppCompatActivity {
                             String stremail = firebaseUser.getEmail();
                             String uid = firebaseUser.getUid();
                             String strpw = pw.getText().toString().trim();
-                            sign = "true";
+                            //sign = "true";
 
                             HashMap<Object, String> hashMap = new HashMap<>();
                             hashMap.put("uid", uid);
@@ -273,6 +273,7 @@ public class SignupActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(SignupActivity.this, "이미 존재하는 회원입니다.", Toast.LENGTH_SHORT).show();
                         }
+                        //sign = "false";
                     }
                 });
 

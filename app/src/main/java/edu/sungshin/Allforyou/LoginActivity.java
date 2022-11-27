@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.TintTypedArray;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +34,9 @@ import edu.sungshin.Allforyou.SignupActivity;
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;
-    private DatabaseReference mDatabaseRef;
+    //FirebaseAuth auth;
+    DatabaseReference mDatabaseRef;
+    private DatabaseReference mdatabaseRef;
     PreferenceManager myPre;
     String sign = "false";
 
@@ -43,7 +46,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mFirebaseAuth = FirebaseAuth.getInstance();
+        //FirebaseUser user = mFirebaseAuth.getCurrentUser();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Allforyou");
+        mdatabaseRef = FirebaseDatabase.getInstance().getReference().child("User");
 
         Button button = (Button)findViewById(R.id.btn1);
         TextView register = (TextView)findViewById(R.id.signin);
@@ -52,20 +57,6 @@ public class LoginActivity extends AppCompatActivity {
         EditText etext1 = (EditText) findViewById(R.id.etext1);
         EditText etext2 = (EditText) findViewById(R.id.etext2);
 
-/*
-        mDatabaseRef.child(mFirebaseAuth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sign = dataSnapshot.getValue(String.class);
-                //sign = "false";
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-            }
-        });
-
- */
 
         //자동로그인
         FirebaseUser user = mFirebaseAuth.getCurrentUser();
@@ -82,14 +73,29 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-/*
-        if(sign == "true"){
+
+
+        /*
+
+        mdatabaseRef.child(mFirebaseAuth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                sign = dataSnapshot.getValue(String.class);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+            }
+        });
+
+
+        if(user!= null){
             sign = "false";
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
+
         }
-        else{
+        else if(user!= null & (sign == "false")){
        // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
+
         user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
@@ -102,10 +108,8 @@ public class LoginActivity extends AppCompatActivity {
         });
         }
 
- */
 
-
-
+         */
 
 
 
@@ -125,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-                            //sign = "true";
+                            sign = "true";
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();

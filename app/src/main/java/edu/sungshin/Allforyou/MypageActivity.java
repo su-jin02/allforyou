@@ -92,11 +92,12 @@ public class MypageActivity extends AppCompatActivity {
         });
 
         /*
+
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 sign = dataSnapshot.getValue(String.class);
-                //sign = "false";
+                sign = "false";
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -104,9 +105,9 @@ public class MypageActivity extends AppCompatActivity {
             }
         });
 
+
+
          */
-
-
 
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("birth").addValueEventListener(new ValueEventListener() {
             @Override
