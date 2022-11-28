@@ -91,24 +91,6 @@ public class MypageActivity extends AppCompatActivity {
             }
         });
 
-        /*
-
-        mDatabaseRef.child(auth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sign = dataSnapshot.getValue(String.class);
-                sign = "false";
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-            }
-        });
-
-
-
-         */
-
         mDatabaseRef.child(auth.getCurrentUser().getUid()).child("birth").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

@@ -75,44 +75,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-        /*
-
-        mdatabaseRef.child(mFirebaseAuth.getCurrentUser().getUid()).child("signup").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                sign = dataSnapshot.getValue(String.class);
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-            }
-        });
-
-
-        if(user!= null){
-            sign = "false";
-
-        }
-        else if(user!= null & (sign == "false")){
-       // 현재 사용자의 idToken을 확인하여 자동 로그인 시킬지 말지 결정
-
-        user.getIdToken(true).addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task<GetTokenResult> task) {
-                if(task.isSuccessful()) {
-                    String idToken = task.getResult().getToken();
-                    Intent homeMove_intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(homeMove_intent);
-                }
-            }
-        });
-        }
-
-
-         */
-
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
